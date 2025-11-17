@@ -254,6 +254,27 @@ a.btn {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+#fun-zone {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#fun-text {
+  position: realtive;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.fun-img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 a.btn:hover {
   background-color: #005c99;
