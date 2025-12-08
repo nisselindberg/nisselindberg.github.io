@@ -132,3 +132,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   moveElements();
 });
+const filterButtons = document.querySelectorAll(".filter-btn");
+const caseCards = document.querySelectorAll(".case-card");
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const category = btn.dataset.category;
+    caseCards.forEach((card) => {
+      if (category === "all" || card.classList.contains(category)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
