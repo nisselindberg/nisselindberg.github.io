@@ -1,0 +1,131 @@
+/* =====================
+Base
+===================== */
+body {
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #ffffff; /* samma bakgrund som index */
+  color: #000;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* =====================
+Navigation
+===================== */
+nav {
+  background-color: #cba1a1;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* =====================
+Work / Case Detail
+===================== */
+.work-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrerar blocken */
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #fff; /* kort-bakgrund */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-container h1 {
+  text-align: center;
+}
+
+.work-container p,
+.work-container h2 {
+  text-align: left;
+  max-width: 700px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #357ab8;
+}
+
+/* =====================
+Footer / Contact
+===================== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+Responsive
+===================== */
+@media (max-width: 768px) {
+  .work-container p,
+  .work-container h2 {
+    max-width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}

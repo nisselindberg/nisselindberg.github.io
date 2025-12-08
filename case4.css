@@ -1,0 +1,159 @@
+body {
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* =====================
+Header / Navigation
+===================== */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1,
+header h2 {
+  margin: 0.5rem 0;
+}
+
+header p {
+  margin: 0.5rem 0 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 0.5rem;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* =====================
+Page Featured Image
+===================== */
+.page-single-featured-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+
+/* =====================
+Main / Entry Content
+===================== */
+.site-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.entry-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.entry-content h1,
+.entry-content h2 {
+  text-align: left;
+  max-width: 700px;
+}
+
+.entry-content p {
+  text-align: left;
+  max-width: 700px;
+}
+
+figure {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* =====================
+Buttons
+===================== */
+.wp-block-button__link,
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.wp-block-button__link:hover,
+.btn:hover {
+  background-color: #357ab8;
+}
+
+/* =====================
+Footer
+===================== */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+Responsive
+===================== */
+@media (max-width: 768px) {
+  .entry-content h1,
+  .entry-content h2,
+  .entry-content p {
+    max-width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
