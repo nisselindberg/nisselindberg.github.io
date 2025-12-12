@@ -1,12 +1,9 @@
-/* =====================
-Base
-===================== */
 body {
   font-family: "Satoshi", sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #dfbebe; /* samma bakgrund som index */
+  background-color: #ffffff;
   color: #000;
 }
 
