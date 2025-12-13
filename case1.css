@@ -1,131 +1,144 @@
-/* =====================
-Base
-===================== */
+/* Global */
+html,
 body {
+  font-size: 16px;
   font-family: "Satoshi", sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #ffffff; /* samma bakgrund som index */
-  color: #000;
 }
 
-img,
-iframe {
+img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1rem auto;
 }
 
-/* =====================
-Navigation
-===================== */
+/* Navigation */
 nav {
-  background-color: #cba1a1;
-  padding: 1rem 0;
-  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 20px;
+  z-index: 1000;
+  background: #ffffff;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 1rem;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.8rem 1rem;
 }
 
 nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
   padding: 0.35rem 0.6rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.1);
-  transition: background 0.3s;
 }
 
-nav a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+/* Case Page */
+.case {
+  padding: 6rem 2rem 4rem;
+  background-color: #ffffff;
 }
 
-/* =====================
-Work / Case Detail
-===================== */
-.work-container {
+.case-container {
   max-width: 900px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centrerar blocken */
-  gap: 1.5rem;
-  padding: 2rem;
-  background-color: #fff; /* kort-bakgrund */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.work-container h1 {
-  text-align: center;
-}
-
-.work-container p,
-.work-container h2 {
+  margin: 0 auto;
   text-align: left;
-  max-width: 700px;
+}
+
+.case-container h1,
+.case-container h2,
+.case-container p {
+  margin-bottom: 1rem;
+}
+
+.case-container img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .nav-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
   margin-top: 2rem;
 }
 
-.btn {
-  padding: 10px 20px;
-  text-decoration: none;
-  background-color: #4a90e2;
+.nav-buttons .btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #000;
   color: #fff;
   border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #357ab8;
-}
-
-/* =====================
-Footer / Contact
-===================== */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #f0f0f0;
-  margin-top: 2rem;
-}
-
-footer a {
   text-decoration: none;
-  color: #000;
 }
 
-footer a:hover {
-  text-decoration: underline;
+.nav-buttons .btn:hover {
+  background-color: #333;
 }
 
-/* =====================
-Responsive
-===================== */
-@media (max-width: 768px) {
-  .work-container p,
-  .work-container h2 {
-    max-width: 100%;
-  }
-  iframe {
-    width: 100%;
-    height: auto;
-  }
+/* Footer / Contact */
+#contact {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.contact-container p {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.contact-container a.btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.contact-container a.btn:hover {
+  background-color: #333;
+}
+
+footer {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
 }
