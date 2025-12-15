@@ -71,13 +71,8 @@
   }
 
   function initNavHoverEffect() {
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener(
-        "mouseenter",
-        () => (link.style.transform = "scale(1.03)")
-      );
-      link.addEventListener("mouseleave", () => (link.style.transform = ""));
-    });
+    // Removed inline style manipulation - CSS handles hover effects
+    // This prevents conflicts with CSS transitions
   }
 
   function createSparkle(x, y) {
@@ -120,12 +115,19 @@
   }
 
   function initSectionReveal() {
-    if (!("IntersectionObserver" in window)) return;
+    if (!("IntersectionObserver" in window)) {
+      // Fallback: show sections immediately if IntersectionObserver is not supported
+      document.querySelectorAll("section").forEach((sec) => {
+        sec.style.opacity = "1";
+      });
+      return;
+    }
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.style.animation = "reveal 0.6s ease forwards";
+            entry.target.style.opacity = "1";
             observer.unobserve(entry.target);
           }
         });
@@ -134,7 +136,7 @@
     );
 
     document.querySelectorAll("section").forEach((sec) => {
-      sec.style.opacity = 0;
+      sec.style.opacity = "0";
       observer.observe(sec);
     });
   }
@@ -177,14 +179,23 @@
   }
 
   function initLazyLoading() {
+    // Native lazy loading is handled by the browser via loading="lazy" attribute
+    // This function is kept for potential future enhancements
     if (!("IntersectionObserver" in window)) return;
-    const imgs = document.querySelectorAll('img[loading="lazy"]');
+    
+    // Only handle images with data-src attribute (for custom lazy loading)
+    const imgs = document.querySelectorAll('img[data-src]');
+    if (imgs.length === 0) return;
+    
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target;
-            if (img.dataset.src) img.src = img.dataset.src;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute("data-src");
+            }
             img.classList.add("loaded");
             io.unobserve(img);
           }
@@ -207,7 +218,6 @@
       }
     });
   }
-
 
   document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
