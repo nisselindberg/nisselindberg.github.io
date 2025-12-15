@@ -1,18 +1,3 @@
-/* Global */
-html,
-body {
-  font-size: 16px;
-  font-family: "Satoshi", sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* ========================================
    CSS VARIABLES & GLOBAL STYLES
    ======================================== */
@@ -530,6 +515,14 @@ nav a.active {
   color: var(--color-text-light);
   margin: 0;
   padding-bottom: var(--spacing-lg);
+}
+
+.case-card .case-insikter {
+  font-size: var(--font-size-small);
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
 }
 
 .case-btn {
