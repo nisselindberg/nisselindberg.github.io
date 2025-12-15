@@ -199,6 +199,15 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: box-shadow var(--transition-normal),
     background-color var(--transition-normal);
+  border: none;
+}
+
+/* Hide any scroll indicator elements */
+#scroll-indicator,
+.scroll-indicator,
+[id*="scroll"],
+[class*="scroll-indicator"] {
+  display: none !important;
 }
 
 header:hover {
@@ -211,6 +220,8 @@ nav {
   align-items: center;
   padding: var(--spacing-md) var(--spacing-lg);
   gap: var(--spacing-lg);
+  background-color: transparent;
+  border: none;
 }
 
 nav ul {
