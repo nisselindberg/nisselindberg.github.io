@@ -3,24 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AFRY Smart Forestry - Case study av Nisse Lindberg"
+    />
     <title>AFRY Smart Forestry | Nisse Lindberg</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Header / Meny -->
-    <header>
-      <nav>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#work">Work</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#home">Hem</a></li>
+          <li><a href="index.html#work">Arbete</a></li>
+          <li><a href="index.html#about">Om mig</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
       <div
         class="featured-image"
@@ -29,19 +40,21 @@
           height: 300px;
           background-size: cover;
         "
+        role="img"
+        aria-label="AFRY Smart Forestry feature image"
       ></div>
     </header>
 
-    <!-- Main content -->
-    <main>
-      <article class="case">
-        <h1>AFRY Smart Forestry</h1>
+    <main id="main-content">
+      <article class="case" aria-labelledby="case-title">
+        <h1 id="case-title">AFRY Smart Forestry</h1>
         <p>CASE STUDY 5: AFRY Smart Forestry Projekt: ForestKIT AFRY Praktik</p>
         <p><strong>Insikter:</strong> Agilt arbetsätt, Figma kunskaper.</p>
-        <p>
-          <strong>Roll:</strong> UX Designer | <strong>Tools:</strong> Figma,
-          Miro | <strong>Team:</strong> Nisse Lindberg AFRY
-        </p>
+        <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
+          <p><strong>Roll:</strong> UX Designer</p>
+          <p><strong>Verktyg:</strong> Figma, Miro, Teams</p>
+          <p><strong>Team / Kund:</strong> Nisse Lindberg — AFRY</p>
+        </div>
 
         <figure>
           <iframe
@@ -50,66 +63,69 @@
             src="https://www.youtube.com/embed/lJE3pOpWuOU?feature=oembed"
             frameborder="0"
             allowfullscreen
+            title="AFRY Smart Forestry video"
           ></iframe>
         </figure>
 
         <figure>
           <img
+            loading="lazy"
             src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-08-26-kl.-11.46.54-1024x635.png"
             alt="Screenshot 1"
-            width="1024"
           />
         </figure>
 
         <p>
-          <strong>Mål:</strong> Att lära mig mer om agilt teamarbete,
-          Figma-färdigheter och UX.
+          <strong>Mål:</strong> Att lära mig mer om hur ett agilt arbetssätt i
+          team fungerar, Figma-färdigheter samt övrigt UX-arbete.
         </p>
         <p>
-          <strong>Resultat:</strong> Två månader med teamet bakom AFRY Smart
-          Forestry har gett mig erfarenhet av agila team, presentation för PO’s
-          och stakeholders, samt Figma-skills.
+          <strong>Resultat:</strong> 2 Månader med teamet bakom AFRY Smart
+          Forestry har givit mig rejält med kött på benen inför framtiden, med
+          allt vad det gäller att arbeta i agila team och att presentera sin
+          design för PO:s och stakeholders. Dessutom var allt remote vilket gav
+          bra träning i att arbeta i Figma och samarbeta digitalt.
         </p>
 
         <figure>
           <img
+            loading="lazy"
             src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-08-25-kl.-10.13.37-1024x522.png"
             alt="Screenshot 2"
-            width="1024"
           />
         </figure>
 
+        <h2>Lärdomar</h2>
         <p>
-          <strong>Agilt arbetssätt:</strong> Jag deltog i ett agilt team med
-          scrummaster, project owners, utvecklare och testare. En mycket lärorik
-          erfarenhet.
+          Att lära mig mer om hur ett agilt arbetssätt i team fungerar,
+          förbättra mina Figma‑färdigheter samt fördjupa övrigt UX‑arbete.
+        </p>
+        <p>
+          2 månader med teamet bakom AFRY Smart Forestry gav mig rejält med kött
+          på benen inför framtiden — allt från att arbeta i agila team till att
+          presentera design för PO:s och stakeholders. Projektet var helt remote
+          vilket också gav värdefull träning i att samarbeta i Figma och
+          kommunicera designbeslut digitalt.
+        </p>
+
+        <h2>Reflektion &amp; Analys</h2>
+        <p>
+          Det kan ta väldigt lång tid att komma in i projekt när en ny UX:are
+          kommer in. Att skapa sin egen struktur som hela teamet är med på tror
+          jag är viktigt för att göra ett bra jobb. Det är absolut ingen
+          självklarhet för en UX Designer att få en överlämning från tidigare UX
+          Designer, och utvecklingen forsätter gärna utan dokumentation vilket
+          ställer till det för UX Designern som bara har gammalt material att
+          jobba med och i mångt och mycket får börja från noll.
         </p>
 
         <figure>
           <img
+            loading="lazy"
             src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-09-01-kl.-09.26.54-999x1024.png"
             alt="Screenshot 3"
-            width="552"
           />
         </figure>
-
-        <p>
-          <strong>Figma design:</strong> Vi gjorde många iterationer av design
-          som presenterades för teamet. En integration kommer att implementeras
-          efter nyår och handlar om att sälja skog.
-        </p>
-
-        <figure>
-          <iframe
-            width="730"
-            height="411"
-            src="https://www.youtube.com/embed/X1fjeK5KVMU?feature=oembed"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </figure>
-
-        <p>Vill du komma i kontakt? <strong>info@nisselindberg.com</strong></p>
 
         <div class="nav-buttons">
           <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
@@ -117,23 +133,21 @@
       </article>
     </main>
 
-    <!-- Footer / Contact -->
-    <footer>
-      <section id="contact">
-        <div class="contact-container">
-          <h2>Contact me</h2>
-          <p>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
-            ><br />
-            <i class="fas fa-phone"></i>
-            <a href="tel:+46738700666">+46 738 700 666</a>
-          </p>
-        </div>
-      </section>
+    <footer role="contentinfo">
+      <div class="contact-container">
+        <h2>Kontakt</h2>
+        <p>
+          <strong>E-post:</strong>
+          <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
+          ><br />
+          <strong>Telefon:</strong>
+          <a href="tel:+46738700666">+46 738 700 666</a>
+        </p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>

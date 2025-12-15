@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nisse Lindberg Portfolio</title>
+    <meta
+      name="description"
+      content="Nisse Lindberg - UX Designer. Jag skapar användarcentrerade designlösningar som förbättrar användarupplevelsen."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Nisse Lindberg | UX Designer Portfolio</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
       rel="stylesheet"
@@ -12,169 +17,227 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehål</a>
+
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
+        <ul class="main-menu">
+          <li><a href="#home" aria-label="Hem">Home</a></li>
+          <li><a href="#work" aria-label="Mitt arbete">Work</a></li>
+          <li><a href="#about" aria-label="Om mig">About</a></li>
+          <li><a href="#contact" aria-label="Kontakta mig">Contact</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
     </header>
 
-    <main>
-      <section id="home">
+    <main id="main-content">
+      <!-- Home Section -->
+      <section id="home" aria-label="Hem">
         <div class="hero-container">
-          <h1 data-aos="fade-up" data-aos-delay="1000">Welcome!</h1>
-          <img src="img/cropped-Nisse1.jpg" alt="A picture of Nisse Lindberg" />
-          <h2 data-aos="fade-up" data-aos-delay="1000">
-            My name is Nisse — a UX Designer who simplifies complexity and
-            delivers impactful solutions. Creative processes are my greatest
+          <h1 data-aos="fade-up" data-aos-delay="500">Välkommen!</h1>
+          <img
+            src="img/cropped-Nisse1.jpg"
+            alt="Porträtt av Nisse Lindberg, UX Designer"
+            loading="lazy"
+          />
+          <h2 data-aos="fade-up" data-aos-delay="800">
+            Jag är Nisse — en UX Designer som förenklat komplexitet och
+            levererar effektiva lösningar. Kreativa processer är min största
             passion.
           </h2>
           <div class="nav-buttons">
-            <a href="CV25.pdf" class="btn">Download CV</a>
+            <a href="CV25.pdf" class="btn" download aria-label="Ladda ned CV"
+              >Ladda ned CV</a
+            >
             <a
-              href="mailto:info@nisselindberg.com?subject=Let's Connect!&body=Great to connect with you!"
+              href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
               class="btn"
-              >Email Me</a
+              aria-label="Skicka e-post till Nisse"
+              >Skicka E-post</a
             >
           </div>
         </div>
       </section>
 
-      <section id="work">
+      <!-- Work Section -->
+      <section id="work" aria-label="Mitt arbete">
         <div class="work-container">
-          <h2 data-aos="fade-left">My Expertise</h2>
-          <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            I specialize in creating user-centered designs that enhance user
-            experience and drive engagement. My skills include user research,
-            wireframing, prototyping, and usability testing.
+          <h2>Min expertis</h2>
+          <p>
+            Jag specialiserar mig på att skapa användarcentrerade designer som
+            förbättrar användarupplevelsen och ökar engagemanget. Mina
+            färdigheter inkluderar användarforskning, wireframing, prototypering
+            och användbarhetstest.
           </p>
           <div class="cases">
-            <div class="case-card">
-              <img src="./img/case1.jpg" alt="Club AFRY Sharepoint" />
+            <article class="case-card" data-category="design">
+              <img
+                src="img/case1.jpg"
+                alt="Club AFRY Sharepoint - Redesign projekt"
+                loading="lazy"
+              />
               <h3>Club AFRY Sharepoint</h3>
               <p>CASE 6: Club AFRY Projekt: Sharepoint Redesign AFRY Praktik</p>
-              <a href="./case1.html">Utforska Case</a>
-            </div>
-            <div class="case-card">
-              <img src="./img/case2.jpeg" alt="AFRY Smart Forestry" />
+              <a href="case1.html" class="btn case-btn">Utforska Case</a>
+            </article>
+            <article class="case-card" data-category="ux">
+              <img
+                src="img/case2.jpeg"
+                alt="AFRY Smart Forestry - ForestKIT projekt"
+                loading="lazy"
+              />
               <h3>AFRY Smart Forestry</h3>
               <p>
                 CASE STUDY 5: AFRY Smart Forestry Projekt: ForestKIT AFRY
                 Praktik
               </p>
-              <a href="./case2.html">Utforska Case</a>
-            </div>
-            <div class="case-card">
-              <img src="./img/case3.png" alt="Aireal" />
+              <a href="case2.html" class="btn case-btn">Utforska Case</a>
+            </article>
+            <article class="case-card" data-category="branding">
+              <img
+                src="img/case3.png"
+                alt="Aireal - Logo och UI Design"
+                loading="lazy"
+              />
               <h3>Aireal</h3>
               <p>
                 CASE 4: Aireal Solutions Kund: Elva Group Work: Logo Design, UI
-                Design Insikter: IT-system, team, kundkontakt.
+                Design
               </p>
-              <a href="./case3.html">Utforska Case</a>
-            </div>
-            <div class="case-card">
-              <img src="./img/case4.png" alt="BRF.SE" />
+              <a href="case3.html" class="btn case-btn">Utforska Case</a>
+            </article>
+            <article class="case-card" data-category="ui">
+              <img
+                src="img/case4.png"
+                alt="BRF.SE - Hemsida, App och skärm design"
+                loading="lazy"
+              />
               <h3>BRF.SE</h3>
               <p>CASE 3: BRF.SE Hemsida, App & skärm 2025 Skolprojekt</p>
-              <a href="./case4.html">Utforska Case</a>
-            </div>
-            <div class="case-card">
-              <img src="./img/case5.png" alt="Closely" />
+              <a href="case4.html" class="btn case-btn">Utforska Case</a>
+            </article>
+            <article class="case-card" data-category="social">
+              <img
+                src="img/case5.png"
+                alt="Closely - Social media projekt"
+                loading="lazy"
+              />
               <h3>Closely</h3>
               <p>Case 2: 2025 SOCIAL MEDIA Skolprojekt</p>
-              <a href="./case5.html">Utforska Case</a>
-            </div>
-            <div class="case-card">
-              <img src="./img/case6.png" alt="Klädbutiken" />
-              <h3>Klädbutiken</h3>
-              <p>
-                Case 1: Konsumentbeteenden online, hållbarhetsfokus och minskat
-                svinn.
+              <a href="case5.html" class="btn case-btn">Utforska Case</a>
+            </article>
+            <article class="case-card" data-category="sharepoint">
+              <img
+                src="img/case1.jpg"
+                alt="Club AFRY Sharepoint - Sharepoint Redesign"
+                loading="lazy"
+              />
+              <h3>Club AFRY Sharepoint</h3>
+              <p>CASE 6: Club AFRY Projekt: Sharepoint Redesign AFRY Praktik</p>
+              <p class="case-insikter">
+                Insikter: Kundkontakt, Designprocess, Självständigt arbete.
               </p>
-              <a href="./case6.html">Utforska Case</a>
-            </div>
+              <a href="case1.html" class="btn case-btn">Utforska Case</a>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about">
+      <!-- About Section -->
+      <section id="about" aria-label="Om mig">
         <div class="about-container">
-          <h2 data-aos="fade-right" data-aos-delay="200">About me</h2>
+          <h2 data-aos="fade-right" data-aos-delay="200">Om mig</h2>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            Hello! My name is Nisse Lindberg, and I am in my second year
-            studying to become a UX Designer at IT-Högskolan. Creative processes
-            are one of my greatest passions in life. I enjoy tackling challenges
-            and collaborating with others to create impactful solutions. I
-            design with purpose, always keeping the users in mind to create
-            intuitive and meaningful experiences.
+            Hej! Jag heter Nisse Lindberg och läser mitt andra år för att bli UX
+            Designer på IT-Högskolan. Kreativa processer är en av mina största
+            passioner i livet. Jag gillar att tackla utmaningar och samarbeta
+            med andra för att skapa effektiva lösningar. Jag designar med syfte,
+            alltid med användaren i åtanke för att skapa intuitiva och
+            meningsfulla upplevelser.
           </p>
 
-          <h3 data-aos="zoom-in" data-aos-delay="200">Services:</h3>
+          <h3 data-aos="zoom-in" data-aos-delay="200">Tjänster:</h3>
           <ul data-aos="zoom-in" data-aos-delay="200">
-            <li>User Research</li>
-            <li>Usability Testing</li>
+            <li>Användarforskning</li>
+            <li>Användbarhetstest</li>
             <li>Wireframing</li>
-            <li>Prototyping</li>
-            <li>Accessible Design</li>
+            <li>Prototypering</li>
+            <li>Tillgänglig Design</li>
           </ul>
 
-          <h3 data-aos="zoom-out" data-aos-delay="200">Personal:</h3>
+          <h3 data-aos="zoom-out" data-aos-delay="200">Personligt:</h3>
           <p data-aos="zoom-out" data-aos-delay="200">
-            I am a 44-year-old parent of young children and a former musician
-            from Gothenburg. I love working out, traveling, and playing music.
-            Music is an important part of my life.
+            Jag är 44 år gammal förälder till små barn och tidigare musikant
+            från Göteborg. Jag älskar att träna, resa och spela musik. Musik är
+            en viktig del av mitt liv.
           </p>
 
           <div class="about-images">
-            <img src="img/nissegitarr.webp" alt="Nisse playing guitar" />
-            <img src="img/nisseandy.avif" alt="Nisse running with Andy McCoy" />
-            <img src="img/kids.avif" alt="Nisse's kids" />
+            <img
+              src="img/nissegitarr.webp"
+              alt="Nisse spelar gitarr"
+              loading="lazy"
+            />
+            <img
+              src="img/nisseandy.avif"
+              alt="Nisse springer med Andy McCoy"
+              loading="lazy"
+            />
+            <img src="img/kids.avif" alt="Nisses barn" loading="lazy" />
           </div>
 
-          <a href="#contact" class="btn">Contact</a>
+          <div class="about-btn-container">
+            <a href="#contact" class="btn">Kontakta mig</a>
+          </div>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact">
+      <!-- Contact Section -->
+      <section id="contact" aria-label="Kontakt">
         <div class="contact-container">
-          <h2>Contact me</h2>
-          <img src="img/cropped-Nisse1.jpg" alt="Nisse Lindberg" />
+          <h2>Kontakta mig</h2>
+          <img
+            src="img/cropped-Nisse1.jpg"
+            alt="Porträtt av Nisse Lindberg"
+            loading="lazy"
+          />
           <p>
-            Feel free to email or call!<br />
-            <i class="fas fa-envelope"></i>
+            Tveka inte att mejla eller ringa mig!<br />
+            <strong>E-post:</strong>
             <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
             ><br />
-            <i class="fas fa-phone"></i>
+            <strong>Telefon:</strong>
             <a href="tel:+46738700666">+46 738 700 666</a>
           </p>
+          <p class="contact-cta">
+            Vill du komma i kontakt? Skriv till mig på:
+            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
+          </p>
           <a
-            href="mailto:info@nisselindberg.com?subject=Let's Connect!&body=Great to get in contact with you!"
+            href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
             class="btn"
-            >Email Me</a
+            >Skicka E-post</a
           >
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="footer-container">
-        <p>
-          Vill du komma i kontakt?
-          <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
-        </p>
-        <p>Telefon: <a href="tel:+46738700666">+46 738 700 666</a></p>
-        <p>&copy; 2025 Nisse Lindberg</p>
-      </div>
+    <footer role="contentinfo">
+      <p>
+        &copy; 2025 Nisse Lindberg |
+        <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
+      </p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>

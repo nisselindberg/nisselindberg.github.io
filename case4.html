@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BRF.SE - Case study av Nisse Lindberg" />
     <title>BRF.SE - Case 4 | Nisse Lindberg Portfolio</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
@@ -12,27 +13,35 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
+        <ul class="main-menu">
+          <li><a href="index.html#home">Hem</a></li>
+          <li><a href="index.html#work">Arbete</a></li>
+          <li><a href="index.html#about">Om mig</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section id="work">
         <div class="work-container">
-          <h2 data-aos="fade-left">BRF.SE</h2>
+          <h1 data-aos="fade-left">BRF.SE</h1>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             CASE 3: BRF.SE Hemsida, App & skärm 2025 Skolprojekt. Fokus på
             användarvänlighet, responsiv design och tydlig visuell identitet.
           </p>
           <div class="case-detail">
-            <img src="./img/case4.png" alt="BRF.SE Project" />
+            <img loading="lazy" src="img/case4.png" alt="BRF.SE Project" />
             <h3>Projektbeskrivning</h3>
             <p>
               Design av hemsida och app för BRF.SE med målet att förenkla
@@ -45,18 +54,18 @@
 
       <section id="about">
         <div class="about-container">
-          <h2 data-aos="fade-right" data-aos-delay="200">About this Case</h2>
+          <h2 data-aos="fade-right" data-aos-delay="200">Om detta case</h2>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            Detta projekt är en del av min UX-portfolio där jag visar
-            designprocessen från research till färdig prototyp. Målet var att
-            skapa en intuitiv lösning som fungerar för alla användare.
+            Detta projekt visar designprocessen från research till färdig
+            prototyp. Målet var att skapa en intuitiv lösning som fungerar för
+            alla användare.
           </p>
         </div>
       </section>
 
       <section id="contact">
         <div class="contact-container">
-          <h2>Contact me</h2>
+          <h2>Kontakt</h2>
           <p>
             Vill du veta mer om detta projekt eller diskutera UX/design?
             <br />
@@ -66,9 +75,14 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer role="contentinfo">
+      <div class="contact-container">
+        <p>&copy; 2025 Nisse Lindberg</p>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Klädbutiken - Case study av Nisse Lindberg"
+    />
     <title>Klädbutiken - Case 6 | Nisse Lindberg Portfolio</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
@@ -12,21 +16,29 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
+        <ul class="main-menu">
+          <li><a href="index.html#home">Hem</a></li>
+          <li><a href="index.html#work">Arbete</a></li>
+          <li><a href="index.html#about">Om mig</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section id="work">
         <div class="work-container">
-          <h2 data-aos="fade-left">Klädbutiken</h2>
+          <h1 data-aos="fade-left">Klädbutiken</h1>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             CASE 1: Konsumentbeteenden online, hållbarhetsfokus och minskat
             svinn. Projektet syftar till att förstå köpbeteenden och skapa
@@ -70,22 +82,27 @@
 
             <div class="case-images">
               <img
+                loading="lazy"
                 src="https://www.nisselindberg.com/wp-content/uploads/2024/12/Skarmavbild-2024-11-14-kl.-11.18.39-907x1024.png"
                 alt="Research"
               />
               <img
+                loading="lazy"
                 src="https://www.nisselindberg.com/wp-content/uploads/2024/12/Skarmavbild-2024-11-15-kl.-11.32.11-1024x1022.png"
                 alt="Intervjuer"
               />
               <img
+                loading="lazy"
                 src="https://www.nisselindberg.com/wp-content/uploads/2024/12/Skarmavbild-2024-11-15-kl.-10.49.19-1024x726.png"
                 alt="Personas"
               />
               <img
+                loading="lazy"
                 src="https://www.nisselindberg.com/wp-content/uploads/2024/12/Skarmavbild-2024-11-15-kl.-10.19.15-1024x731.png"
                 alt="Personas"
               />
               <img
+                loading="lazy"
                 src="https://www.nisselindberg.com/wp-content/uploads/2024/12/Skarmavbild-2024-11-15-kl.-10.55.03-1024x740.png"
                 alt="User Journey"
               />
@@ -100,6 +117,7 @@
             <a
               href="https://www.figma.com/design/PaRN4AEO74bITA0pcLHWHu/Prototyp-Kl%C3%A4dbutiken-Projekt?node-id=0-1&t=WMvglL2VLJMT57iO-1"
               class="btn"
+              rel="noopener"
               >Testa prototypen</a
             >
           </div>
@@ -108,7 +126,7 @@
 
       <section id="about">
         <div class="about-container">
-          <h2 data-aos="fade-right" data-aos-delay="200">About this Case</h2>
+          <h2 data-aos="fade-right" data-aos-delay="200">Om detta case</h2>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             Projektet visar hela designprocessen från research till prototyp med
             fokus på användarvänlighet och hållbarhet.
@@ -118,19 +136,23 @@
 
       <section id="contact">
         <div class="contact-container">
-          <h2>Contact me</h2>
+          <h2>Kontakt</h2>
           <p>
             Vill du veta mer om detta projekt eller diskutera UX/design?
-            <br />
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
+            <br /><a href="mailto:info@nisselindberg.com"
+              >info@nisselindberg.com</a
+            >
           </p>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer role="contentinfo">
+      <div class="contact-container"><p>&copy; 2025 Nisse Lindberg</p></div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>

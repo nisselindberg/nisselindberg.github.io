@@ -3,39 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BRF.SE | Nisse Lindberg</title>
+    <meta
+      name="description"
+      content="Aireal Solutions - Case study av Nisse Lindberg"
+    />
+    <title>Aireal Solutions | Nisse Lindberg</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Header / Meny -->
-    <header>
-      <nav>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#work">Work</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#home">Hem</a></li>
+          <li><a href="index.html#work">Arbete</a></li>
+          <li><a href="index.html#about">Om mig</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
-      <h1>BRF.SE</h1>
-      <p>Redesign av bostadsrättsföreningens digitala närvaro</p>
     </header>
 
-    <!-- Main content -->
-    <main>
+    <main id="main-content">
       <section class="project-intro">
-        <img src="../img/brf.jpg" alt="BRF.SE design exempel" />
+        <img
+          loading="lazy"
+          src="img/case3.png"
+          alt="Aireal Solutions design exempel"
+        />
         <div class="project-description">
+          <h1 id="case-title">Aireal Solutions</h1>
+          <p>CASE: Aireal Solutions 2025 — Elva Group</p>
           <h2>Om projektet</h2>
           <p>
-            Målet var att skapa en enkel, tydlig och användarvänlig webbplats
-            för bostadsrättsföreningen. Fokus låg på överskådlighet,
-            kontaktinformation och snabb åtkomst till viktiga dokument.
+            Ett koncept- och visuellt arbete för Aireal Solutions, ett
+            drönarrelaterat projekt under Elva Group. Fokus låg på att skapa en
+            portal för drönartjänster med tydliga vyer och ett förslag till
+            designsystem.
           </p>
         </div>
       </section>
@@ -44,33 +59,47 @@
         <div class="detail-card">
           <h3>Uppdrag</h3>
           <p>
-            Designa en modern och responsiv webbplats som fungerar på både dator
-            och mobil.
+            Skapa en portal för en drönartjänst inklusive vyer och
+            designsystemförslag.
           </p>
         </div>
         <div class="detail-card">
           <h3>Roll</h3>
-          <p>UX/UI-design, prototyping, användartester och implementering.</p>
+          <p>UX/UI-design, koncept, logoförslag och prototyper.</p>
         </div>
         <div class="detail-card">
           <h3>Verktyg</h3>
-          <p>Figma, Adobe XD, HTML/CSS</p>
+          <p>Figma, Miro</p>
         </div>
       </section>
 
       <section class="project-gallery">
         <h2>Exempel på sidor</h2>
         <div class="gallery-grid">
-          <img src="../img/brf1.jpg" alt="Startsida" />
-          <img src="../img/brf2.jpg" alt="Dokument och info" />
-          <img src="../img/brf3.jpg" alt="Kontaktformulär" />
+          <img
+            loading="lazy"
+            src="img/case3-1.png"
+            alt="Portal vy – startsida"
+          />
+          <img loading="lazy" src="img/case3-2.png" alt="Portal vy – kartvy" />
+          <img
+            loading="lazy"
+            src="img/case3-3.png"
+            alt="Designsystem exempel"
+          />
         </div>
       </section>
 
-      <section class="project-link">
-        <a href="https://www.brf.se" target="_blank" class="btn"
-          >Utforska BRF.SE</a
-        >
+      <section class="project-content">
+        <h2>Mål</h2>
+        <p>Skapa en portal för en drönartjänst.</p>
+
+        <h2>Resultat</h2>
+        <p>
+          Skapade förslag till ny logo, hittade designsystem och gjorde vyer och
+          förslag på layout till en framtida portal. Gjorde även en enkät för
+          att samla krav och användarinsikter.
+        </p>
       </section>
 
       <div class="nav-buttons">
@@ -78,23 +107,21 @@
       </div>
     </main>
 
-    <!-- Footer / Contact -->
-    <footer>
-      <section id="contact">
-        <div class="contact-container">
-          <h2>Contact me</h2>
-          <p>
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
-            ><br />
-            <i class="fas fa-phone"></i>
-            <a href="tel:+46738700666">+46 738 700 666</a>
-          </p>
-        </div>
-      </section>
+    <footer role="contentinfo">
+      <div class="contact-container">
+        <h2>Kontakt</h2>
+        <p>
+          <strong>E-post:</strong>
+          <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
+          ><br />
+          <strong>Telefon:</strong>
+          <a href="tel:+46738700666">+46 738 700 666</a>
+        </p>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Closely - Case study av Nisse Lindberg" />
     <title>Closely - Case 5 | Nisse Lindberg Portfolio</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
@@ -12,21 +13,29 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <header role="banner">
+      <nav role="navigation" aria-label="Huvudmeny">
+        <ul class="main-menu">
+          <li><a href="index.html#home">Hem</a></li>
+          <li><a href="index.html#work">Arbete</a></li>
+          <li><a href="index.html#about">Om mig</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
+        <button
+          class="theme-toggle"
+          aria-label="Slå på/av mörkt läge"
+          title="Byt tema"
+        >
+          <span class="theme-icon">🌙</span>
+        </button>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section id="work">
         <div class="work-container">
-          <h2 data-aos="fade-left">Closely</h2>
+          <h1 data-aos="fade-left">Closely</h1>
           <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             CASE 2: 2025 SOCIAL MEDIA Skolprojekt. Closely är en ny social media
             app byggd för att skapa enklare, mer personliga och positiva
@@ -36,6 +45,7 @@
           <div class="case-media" data-aos="fade-up">
             <iframe
               src="https://www.youtube.com/embed/PU0mKxYjzQ8"
+              title="Closely video"
               allowfullscreen
             ></iframe>
             <video controls style="aspect-ratio: 2378/1656; margin-top: 20px">
@@ -57,11 +67,11 @@
             <h3>Resultat</h3>
             <p>
               Med Closely kan man nå sina nära vänner enklare, filtrera flödet
-              lättare och få en positiv och spännande upplevelse med allt-i-ett,
-              mer personligt om man vill.
+              lättare och få en positiv upplevelse.
             </p>
 
             <img
+              loading="lazy"
               src="https://www.nisselindberg.com/wp-content/uploads/2025/11/iPhone-16-Pro-Max-1024x768.png"
               alt="iPhone 16 Pro Max"
             />
@@ -71,6 +81,7 @@
             </p>
 
             <img
+              loading="lazy"
               src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-03-19-kl.-17.07.11-1024x609.png"
               alt="Skärmavbild"
             />
@@ -83,26 +94,23 @@
             </p>
 
             <h4>Tester</h4>
-            <p>
-              Testat med användare i eget team. Målgrupp och domänkunskap var
-              stark och omfattande.
-            </p>
+            <p>Testat med användare i eget team.</p>
 
             <h4>Research</h4>
-            <p>
-              Internetresearch, enkäter, intervjuer och case studies innan
-              workshop.
-            </p>
+            <p>Internetresearch, enkäter, intervjuer och case studies.</p>
 
             <img
+              loading="lazy"
               src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-03-19-kl.-09.59.52.png"
               alt="Flöde med filter"
             />
             <img
+              loading="lazy"
               src="https://www.nisselindberg.com/wp-content/uploads/2025/11/Skarmavbild-2025-03-23-kl.-17.02.44.png"
               alt="Utforska flöde"
             />
             <img
+              loading="lazy"
               src="https://www.nisselindberg.com/wp-content/uploads/2025/11/va2.png"
               alt="Personligt flöde"
             />
@@ -112,38 +120,35 @@
             <h3>Reflektion & Analys</h3>
             <p>
               Vi borde ha haft dedikerad moderator och testat med fler grupper.
-              Mer research hade förbättrat insikterna, men resultatet visar
-              potentialen för Closely som produkt.
+              Mer research hade förbättrat insikterna.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section id="about">
-        <div class="about-container">
-          <h2 data-aos="fade-right" data-aos-delay="200">About this Case</h2>
-          <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            Detta projekt visar hela designprocessen från research till prototyp
-            och implementering, med fokus på användarvänlighet och modern UX.
-          </p>
+          <div class="nav-buttons">
+            <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
+          </div>
         </div>
       </section>
 
       <section id="contact">
         <div class="contact-container">
-          <h2>Contact me</h2>
+          <h2>Kontakt</h2>
           <p>
             Vill du veta mer om detta projekt eller diskutera UX/design?
-            <br />
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
+            <br /><a href="mailto:info@nisselindberg.com"
+              >info@nisselindberg.com</a
+            >
           </p>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer role="contentinfo">
+      <div class="contact-container"><p>&copy; 2025 Nisse Lindberg</p></div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
     <script>
       AOS.init();
     </script>
