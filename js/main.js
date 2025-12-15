@@ -208,26 +208,6 @@
     });
   }
 
-  function initScrollIndicator() {
-    const indicator = document.createElement("div");
-    indicator.id = "scroll-indicator";
-    indicator.style.position = "fixed";
-    indicator.style.top = "0";
-    indicator.style.left = "0";
-    indicator.style.height = "3px";
-    indicator.style.backgroundColor = "var(--color-accent)";
-    indicator.style.width = "0%";
-    indicator.style.zIndex = "1001";
-    indicator.style.transition = "width 0.1s ease";
-    document.body.appendChild(indicator);
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const percent = (scrollTop / docHeight) * 100;
-      indicator.style.width = percent + "%";
-    });
-  }
 
   document.addEventListener("DOMContentLoaded", () => {
     initSmoothScroll();
@@ -238,7 +218,6 @@
     initThemeToggle();
     initLazyLoading();
     initKeyboardNav();
-    initScrollIndicator();
     console.log("Site initialized");
   });
 
