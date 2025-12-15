@@ -403,13 +403,20 @@ nav a.active {
   transform: scale(1.02);
 }
 
-.case iframe {
+.case iframe,
+.case video {
   width: 100%;
   max-width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
   border: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: var(--spacing-lg) 0;
+}
+
+.case video {
+  background: var(--color-bg-alt);
 }
 
 .case-container .nav-buttons,
