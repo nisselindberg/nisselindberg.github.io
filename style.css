@@ -196,7 +196,7 @@ header {
   width: 100%;
   background: transparent; /* allow nav background to show through */
   z-index: var(--z-nav);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: box-shadow var(--transition-normal),
     background-color var(--transition-normal);
   border: none;
@@ -211,7 +211,7 @@ header {
 }
 
 header:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 nav {
