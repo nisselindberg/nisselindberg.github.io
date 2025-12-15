@@ -13,19 +13,6 @@ img {
   height: auto;
 }
 
-/* Nav */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  background: var(--color-bg); /* match rest of page */
-  color: var(--color-text);
-  z-index: 1000;
-}
-
 /* ========================================
    CSS VARIABLES & GLOBAL STYLES
    ======================================== */
