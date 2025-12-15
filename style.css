@@ -116,6 +116,7 @@ html {
   padding: 0;
   background: transparent !important;
   overflow-x: hidden;
+  height: 100%;
 }
 
 html,
@@ -126,10 +127,11 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: transparent !important;
   transition: background-color var(--transition-normal),
     color var(--transition-normal);
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 /* Ensure nothing appears above header */
