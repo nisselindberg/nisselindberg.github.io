@@ -111,6 +111,13 @@ img {
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  overflow-x: hidden;
+}
+
 html,
 body {
   font-size: var(--font-size-base);
@@ -126,8 +133,12 @@ body {
 }
 
 /* Ensure nothing appears above header */
-body::before {
+html::before,
+body::before,
+html::after,
+body::after {
   display: none !important;
+  content: none !important;
 }
 
 body.dark-mode {
@@ -198,18 +209,26 @@ img {
 
 header {
   position: fixed;
-  top: 0;
+  top: 0 !important;
   left: 0;
   right: 0;
   width: 100%;
+  max-width: 100%;
   background: transparent !important; /* allow nav background to show through */
   z-index: var(--z-nav);
   box-shadow: none !important;
   transition: box-shadow var(--transition-normal),
     background-color var(--transition-normal);
   border: none !important;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto;
+}
+
+header::before,
+header::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* Hide any scroll indicator elements */
