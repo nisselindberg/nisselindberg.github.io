@@ -434,6 +434,8 @@ nav a.active {
   background-size: cover;
   background-position: center;
   margin-top: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Project intro section */
