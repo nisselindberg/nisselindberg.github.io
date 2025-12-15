@@ -122,6 +122,12 @@ body {
   background-color: var(--color-bg);
   transition: background-color var(--transition-normal),
     color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+/* Ensure nothing appears above header */
+body::before {
+  display: none !important;
 }
 
 body.dark-mode {
@@ -193,13 +199,17 @@ img {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  background: transparent; /* allow nav background to show through */
+  background: transparent !important; /* allow nav background to show through */
   z-index: var(--z-nav);
-  box-shadow: none;
+  box-shadow: none !important;
   transition: box-shadow var(--transition-normal),
     background-color var(--transition-normal);
-  border: none;
+  border: none !important;
+  margin: 0;
+  padding: 0;
 }
 
 /* Hide any scroll indicator elements */
