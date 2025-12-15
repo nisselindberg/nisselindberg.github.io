@@ -14,6 +14,104 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Case page specific styles */
+      .case-container {
+        max-width: 900px;
+        margin: 120px auto 40px;
+        padding: var(--spacing-2xl) var(--spacing-lg);
+      }
+
+      .case-container h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 900;
+        margin-bottom: var(--spacing-md);
+        color: var(--color-text);
+      }
+
+      .case-container h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        margin-top: var(--spacing-2xl);
+        margin-bottom: var(--spacing-md);
+        color: var(--color-text);
+        border-bottom: 2px solid var(--color-accent);
+        padding-bottom: var(--spacing-sm);
+      }
+
+      .case-container p {
+        font-size: var(--font-size-large);
+        line-height: 1.8;
+        margin-bottom: var(--spacing-lg);
+        color: var(--color-text-light);
+      }
+
+      .case-container strong {
+        color: var(--color-text);
+        font-weight: 700;
+      }
+
+      .case-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+        margin: var(--spacing-xl) 0;
+        padding: var(--spacing-lg);
+        background: var(--color-accent);
+        border-radius: var(--radius-md);
+      }
+
+      .case-meta p {
+        margin: 0;
+        font-size: var(--font-size-base);
+      }
+
+      .case-image {
+        margin: var(--spacing-2xl) 0;
+      }
+
+      .case-image img {
+        width: 100%;
+        border-radius: var(--radius-md);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transition: transform var(--transition-normal);
+      }
+
+      .case-image img:hover {
+        transform: scale(1.02);
+      }
+
+      .case-container .nav-buttons {
+        margin-top: var(--spacing-2xl);
+        padding-top: var(--spacing-xl);
+        border-top: 2px solid var(--color-border);
+      }
+
+      footer .contact-container {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: var(--spacing-2xl) var(--spacing-lg);
+      }
+
+      footer .contact-container h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        margin-bottom: var(--spacing-lg);
+        border: none;
+        padding: 0;
+      }
+
+      @media (max-width: 768px) {
+        .case-container {
+          margin-top: 100px;
+          padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        .case-meta {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
