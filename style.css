@@ -127,7 +127,7 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: transparent !important;
+  background-color: var(--color-bg);
   transition: background-color var(--transition-normal),
     color var(--transition-normal);
   overflow-x: hidden;

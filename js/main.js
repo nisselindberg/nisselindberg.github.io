@@ -218,7 +218,6 @@
     initThemeToggle();
     initLazyLoading();
     initKeyboardNav();
-    console.log("Site initialized");
   });
 
   // Small helpers exposed for debugging
