@@ -114,79 +114,15 @@
     });
   }
 
-  function initSectionReveal() {
-    if (!("IntersectionObserver" in window)) {
-      // Fallback: show sections immediately if IntersectionObserver is not supported
-      document.querySelectorAll("section").forEach((sec) => {
-        sec.style.opacity = "1";
-      });
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.animation = "reveal 0.6s ease forwards";
-            entry.target.style.opacity = "1";
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-
-    document.querySelectorAll("section").forEach((sec) => {
-      sec.style.opacity = "0";
-      observer.observe(sec);
-    });
-  }
-
-  function setTheme(theme) {
-    const html = document.documentElement;
-    const toggle = document.querySelector(".theme-toggle");
-    html.setAttribute("data-theme", theme);
-    if (toggle) {
-      const icon = toggle.querySelector(".theme-icon");
-      if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
-    }
-    const meta = document.querySelector("meta[name=theme-color]");
-    if (meta)
-      meta.setAttribute("content", theme === "dark" ? "#1a1a1a" : "#ffffff");
-    localStorage.setItem("theme", theme);
-  }
-
-  function initThemeToggle() {
-    const toggle = document.querySelector(".theme-toggle");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-    const saved = localStorage.getItem("theme");
-    // Only apply a theme automatically if the user has explicitly saved a preference.
-    // Otherwise, leave defaults in CSS untouched so the site appearance doesn't change unexpectedly.
-    if (saved) setTheme(saved);
-
-    if (!toggle) return;
-    toggle.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme");
-      setTheme(current === "dark" ? "light" : "dark");
-    });
-
-    prefersDark.addEventListener("change", (e) => {
-      const savedNow = localStorage.getItem("theme");
-      if (!savedNow) {
-        // Only respond to system changes when there is no saved preference
-        setTheme(e.matches ? "dark" : "light");
-      }
-    });
-  }
-
   function initLazyLoading() {
     // Native lazy loading is handled by the browser via loading="lazy" attribute
     // This function is kept for potential future enhancements
     if (!("IntersectionObserver" in window)) return;
-    
+
     // Only handle images with data-src attribute (for custom lazy loading)
-    const imgs = document.querySelectorAll('img[data-src]');
+    const imgs = document.querySelectorAll("img[data-src]");
     if (imgs.length === 0) return;
-    
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -219,12 +155,85 @@
     });
   }
 
+  function initCaseCardLinks() {
+    document.querySelectorAll(".case-card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        // Don't trigger if a link inside the card was already clicked
+        if (e.target.tagName === "A") {
+          return;
+        }
+        const link = card.querySelector("a.case-btn");
+        if (link && link.href) {
+          window.location.href = link.href;
+        }
+      });
+    });
+  }
+
+  function setTheme(theme) {
+    const html = document.documentElement;
+    const toggle = document.querySelector(".theme-toggle");
+    html.setAttribute("data-theme", theme);
+    if (toggle) {
+      const icon = toggle.querySelector(".theme-icon");
+      if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
+    }
+    const meta = document.querySelector("meta[name=theme-color]");
+    if (meta)
+      meta.setAttribute("content", theme === "dark" ? "#1a1a1a" : "#ffffff");
+    localStorage.setItem("theme", theme);
+  }
+
+  function initThemeToggle() {
+    const toggle = document.querySelector(".theme-toggle");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const saved = localStorage.getItem("theme");
+    if (saved) setTheme(saved);
+    if (!toggle) return;
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+    prefersDark.addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme"))
+        setTheme(e.matches ? "dark" : "light");
+    });
+  }
+
+  function initLenis() {
+    // Check if Lenis is loaded
+    if (typeof Lenis === "undefined") return;
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureDirection: "vertical",
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Connect Lenis to AOS to ensure animations trigger correctly during smooth scroll
+    // Note: AOS usually works fine on its own, but sometimes needs a refresh
+    // on scroll if using a virtual scroller. Lenis is native-friendly so it usually just works.
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    initLenis(); // Initialize smooth scroll first
     initSmoothScroll();
     initNavHoverEffect();
     initSparkleEffect();
     initButtonClickEffect();
-    initSectionReveal();
+    initCaseCardLinks();
     initThemeToggle();
     initLazyLoading();
     initKeyboardNav();

@@ -8,110 +8,14 @@
       content="Club AFRY Sharepoint - Case study av Nisse Lindberg"
     />
     <title>Club AFRY Sharepoint | Nisse Lindberg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <style>
-      /* Case page specific styles */
-      .case-container {
-        max-width: 900px;
-        margin: 120px auto 40px;
-        padding: var(--spacing-2xl) var(--spacing-lg);
-      }
-
-      .case-container h1 {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
-        font-weight: 900;
-        margin-bottom: var(--spacing-md);
-        color: var(--color-text);
-      }
-
-      .case-container h2 {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        font-weight: 700;
-        margin-top: var(--spacing-2xl);
-        margin-bottom: var(--spacing-md);
-        color: var(--color-text);
-        border-bottom: 2px solid var(--color-accent);
-        padding-bottom: var(--spacing-sm);
-      }
-
-      .case-container p {
-        font-size: var(--font-size-large);
-        line-height: 1.8;
-        margin-bottom: var(--spacing-lg);
-        color: var(--color-text-light);
-      }
-
-      .case-container strong {
-        color: var(--color-text);
-        font-weight: 700;
-      }
-
-      .case-meta {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: var(--spacing-md);
-        margin: var(--spacing-xl) 0;
-        padding: var(--spacing-lg);
-        background: var(--color-accent);
-        border-radius: var(--radius-md);
-      }
-
-      .case-meta p {
-        margin: 0;
-        font-size: var(--font-size-base);
-      }
-
-      .case-image {
-        margin: var(--spacing-2xl) 0;
-      }
-
-      .case-image img {
-        width: 100%;
-        border-radius: var(--radius-md);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        transition: transform var(--transition-normal);
-      }
-
-      .case-image img:hover {
-        transform: scale(1.02);
-      }
-
-      .case-container .nav-buttons {
-        margin-top: var(--spacing-2xl);
-        padding-top: var(--spacing-xl);
-        border-top: 2px solid var(--color-border);
-      }
-
-      footer .contact-container {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-        padding: var(--spacing-2xl) var(--spacing-lg);
-      }
-
-      footer .contact-container h2 {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        margin-bottom: var(--spacing-lg);
-        border: none;
-        padding: 0;
-      }
-
-      @media (max-width: 768px) {
-        .case-container {
-          margin-top: 100px;
-          padding: var(--spacing-xl) var(--spacing-md);
-        }
-
-        .case-meta {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
@@ -132,6 +36,19 @@
         </button>
       </nav>
     </header>
+
+    <div
+      class="featured-image"
+      data-aos="fade-in"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2684&auto=format&fit=crop');
+        height: 400px;
+        background-size: cover;
+        margin-top: 100px;
+      "
+      role="img"
+      aria-label="Team som samarbetar på ett kontor"
+    ></div>
 
     <main id="main-content">
       <article class="case-container case" aria-labelledby="case-title">
@@ -204,6 +121,34 @@
           tighta avstämningar är viktiga.
         </p>
 
+        <section
+          class="project-gallery"
+          data-aos="fade-up"
+          data-aos-delay="900"
+        >
+          <h2>Designprocess</h2>
+          <div class="gallery-grid">
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2670&auto=format&fit=crop"
+              alt="Wireframes och skisser för Sharepoint-sidan"
+            />
+            <img
+              loading="lazy"
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop"
+              alt="Designkomponenter skapade i Figma"
+            />
+          </div>
+        </section>
+
+        <div class="case-image" data-aos="fade-up" data-aos-delay="1250">
+          <img
+            loading="lazy"
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop"
+            alt="Exempel på den nya designen för Club AFRY's SharePoint-sida."
+          />
+        </div>
+
         <h2 data-aos="fade-up" data-aos-delay="1300">Nästa steg</h2>
         <p data-aos="fade-up" data-aos-delay="1400">
           I deras process var det att implementera designen i SharePoint och
@@ -233,7 +178,7 @@
         <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
         <p data-aos="fade-up" data-aos-delay="100">
           <strong>E-post:</strong>
-          <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
+          <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
           ><br />
           <strong>Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>

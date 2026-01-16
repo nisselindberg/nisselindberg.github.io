@@ -8,6 +8,7 @@
   --color-secondary: #ffffff;
   --color-accent: #f7e1ff;
   --color-accent-hover: #e8c9ff;
+  --color-glow: #d8b4fe; /* Mörkare lila för att synas mot vit bakgrund */
   --color-text: #000000;
   --color-text-light: #666666;
   --color-bg: #ffffff;
@@ -15,7 +16,7 @@
   --color-border: #e0e0e0;
 
   /* Typography */
-  --font-family: "Satoshi", sans-serif;
+  --font-family: "Bricolage Grotesque", sans-serif;
   --font-size-base: 16px;
   --font-size-small: 0.9rem;
   --font-size-large: 1.125rem;
@@ -53,6 +54,7 @@
   --color-secondary: #1a1a1a;
   --color-accent: #3d2e47;
   --color-accent-hover: #4a3a55;
+  --color-glow: var(--color-accent); /* Behåll samma färg i dark mode */
   --color-text: #ffffff;
   --color-text-light: #cccccc;
   --color-bg: #1a1a1a;
@@ -80,6 +82,7 @@
     --color-secondary: #1a1a1a;
     --color-accent: #3d2e47;
     --color-accent-hover: #4a3a55;
+    --color-glow: var(--color-accent);
     --color-text: #ffffff;
     --color-text-light: #cccccc;
     --color-bg: #1a1a1a;
@@ -99,7 +102,6 @@
 html {
   margin: 0;
   padding: 0;
-  background: transparent !important;
   overflow-x: hidden;
   height: 100%;
 }
@@ -110,6 +112,7 @@ body {
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
+  font-weight: 200;
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
@@ -117,15 +120,65 @@ body {
     color var(--transition-normal);
   overflow-x: hidden;
   min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: transparent;
+}
+
+/* Lenis Smooth Scroll recommended styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-family: var(--font-family);
+  font-weight: 200;
 }
 
 /* Ensure nothing appears above header */
 html::before,
-body::before,
 html::after,
 body::after {
   display: none !important;
   content: none !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vw;
+  height: 150vh;
+  background: radial-gradient(
+    circle at center,
+    var(--color-glow) 0%,
+    transparent 60%
+  );
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+  animation: gradient-pulse 10s ease-in-out infinite alternate;
 }
 
 body.dark-mode {
@@ -192,6 +245,17 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes gradient-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0.8;
   }
 }
 
@@ -320,14 +384,14 @@ nav a.active {
 .case-container,
 .case {
   max-width: 900px;
-  margin: 120px auto 40px;
+  margin: var(--spacing-xl) auto var(--spacing-2xl); /* Justerad toppmarginal för att minska avståndet till header-bilden */
   padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
 .case-container h1,
 .case h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 900;
+  font-weight: 200;
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
   line-height: 1.2;
@@ -336,7 +400,7 @@ nav a.active {
 .case-container h2,
 .case h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 200;
   margin-top: var(--spacing-2xl);
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
@@ -347,7 +411,7 @@ nav a.active {
 .case-container h3,
 .case h3 {
   font-size: clamp(1.3rem, 3vw, 1.8rem);
-  font-weight: 700;
+  font-weight: 200;
   margin-top: var(--spacing-xl);
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
@@ -364,7 +428,7 @@ nav a.active {
 .case-container strong,
 .case strong {
   color: var(--color-text);
-  font-weight: 700;
+  font-weight: 200;
 }
 
 .case-meta {
@@ -433,18 +497,11 @@ nav a.active {
   width: 100%;
   background-size: cover;
   background-position: center;
-  margin-top: 60px;
+  height: 400px;
+  margin-top: 160px; /* Justerad för att flytta ner bilden ännu mer från headern */
+  margin-top: 180px; /* Justerad för att flytta ner bilden ännu mer från headern */
   position: relative;
   z-index: 1;
-}
-
-/* Project intro section */
-.project-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
-  margin: var(--spacing-2xl) 0;
-  align-items: center;
 }
 
 .project-intro img {
@@ -518,13 +575,6 @@ footer .contact-container {
   padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
-footer .contact-container h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  margin-bottom: var(--spacing-lg);
-  border: none;
-  padding: 0;
-}
-
 /* Responsive for case pages */
 @media (max-width: 768px) {
   .case-container,
@@ -538,10 +588,6 @@ footer .contact-container h2 {
     grid-template-columns: 1fr;
   }
 
-  .project-intro {
-    grid-template-columns: 1fr;
-  }
-
   .gallery-grid {
     grid-template-columns: 1fr;
   }
@@ -552,13 +598,15 @@ footer .contact-container h2 {
    ======================================== */
 
 #home {
-  background-color: var(--color-bg);
+  background-color: transparent;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 80px var(--spacing-lg) var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-container {
@@ -568,6 +616,8 @@ footer .contact-container h2 {
   align-items: center;
   gap: var(--spacing-lg);
   animation: fadeIn var(--transition-slow) ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes fadeIn {
@@ -583,14 +633,14 @@ footer .contact-container h2 {
 
 .hero-container h1 {
   font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: 900;
+  font-weight: 200;
   margin: 0;
   line-height: 1.2;
 }
 
 .hero-container h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 900;
+  font-weight: 200;
   line-height: 1.5;
   text-align: left;
   margin: 0;
@@ -628,7 +678,7 @@ footer .contact-container h2 {
   color: var(--color-text);
   text-decoration: none;
   border-radius: var(--radius-sm);
-  font-weight: 600;
+  font-weight: 200;
   transition: all var(--transition-fast);
   border: 2px solid var(--color-accent);
   cursor: pointer;
@@ -659,7 +709,7 @@ footer .contact-container h2 {
    ======================================== */
 
 #work {
-  background-color: var(--color-bg);
+  background-color: transparent;
   padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
@@ -698,6 +748,7 @@ footer .contact-container h2 {
   transition: all var(--transition-normal);
   border: 2px solid transparent;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .case-card:hover {
@@ -716,6 +767,11 @@ footer .contact-container h2 {
 
 .case-card:hover img {
   transform: scale(1.05);
+}
+
+/* Specific fix for Closely card image to prevent cropping */
+.case-card[data-category="social"] img {
+  object-fit: contain;
 }
 
 .case-card h3 {
@@ -759,7 +815,7 @@ footer .contact-container h2 {
    ======================================== */
 
 #about {
-  background-color: var(--color-bg-alt);
+  background-color: transparent;
   padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
@@ -800,11 +856,20 @@ footer .contact-container h2 {
   transform: scale(1.05);
 }
 
+.about-images figcaption {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-light);
+}
+
 .about-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
   margin: var(--spacing-2xl) 0;
+}
+
+.about-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
 }
 
 .about-images img {
@@ -831,7 +896,7 @@ footer .contact-container h2 {
    ======================================== */
 
 #contact {
-  background-color: var(--color-bg);
+  background-color: transparent;
   padding: var(--spacing-2xl) var(--spacing-lg);
 }
 

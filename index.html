@@ -9,23 +9,26 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <title>Nisse Lindberg | UX Designer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
 
-    <header role="banner">
-      <nav role="navigation" aria-label="Huvudmeny">
+    <header>
+      <nav aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="#home" aria-label="Hem">Home</a></li>
-          <li><a href="#work" aria-label="Mitt arbete">Work</a></li>
-          <li><a href="#about" aria-label="Om mig">About</a></li>
-          <li><a href="#contact" aria-label="Kontakta mig">Contact</a></li>
+          <li><a href="#home">Hem</a></li>
+          <li><a href="#work">Arbete</a></li>
+          <li><a href="#about">Om mig</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
         <button
           class="theme-toggle"
@@ -37,11 +40,11 @@
       </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main">
       <!-- Home Section -->
       <section id="home" aria-label="Hem">
         <div class="hero-container">
-          <h1 data-aos="fade-up" data-aos-delay="500">Välkommen!</h1>
+          <h1 data-aos="fade-up" data-aos-delay="500">Nisse Lindberg</h1>
           <img
             src="img/cropped-Nisse1.jpg"
             alt="Porträtt av Nisse Lindberg, UX Designer"
@@ -84,7 +87,7 @@
                 loading="lazy"
               />
               <h3>Club AFRY Sharepoint</h3>
-              <p>CASE 6: Club AFRY Projekt: Sharepoint Redesign AFRY Praktik</p>
+              <p>Sharepoint Redesign | AFRY Praktik</p>
               <a href="case1.html" class="btn case-btn">Utforska Case</a>
             </article>
             <article class="case-card" data-category="ux">
@@ -94,10 +97,7 @@
                 loading="lazy"
               />
               <h3>AFRY Smart Forestry</h3>
-              <p>
-                CASE STUDY 5: AFRY Smart Forestry Projekt: ForestKIT AFRY
-                Praktik
-              </p>
+              <p>ForestKIT | AFRY Praktik</p>
               <a href="case2.html" class="btn case-btn">Utforska Case</a>
             </article>
             <article class="case-card" data-category="branding">
@@ -107,10 +107,7 @@
                 loading="lazy"
               />
               <h3>Aireal</h3>
-              <p>
-                CASE 4: Aireal Solutions Kund: Elva Group Work: Logo Design, UI
-                Design
-              </p>
+              <p>Logo Design & UI Design | Elva Group</p>
               <a href="case3.html" class="btn case-btn">Utforska Case</a>
             </article>
             <article class="case-card" data-category="ui">
@@ -120,7 +117,7 @@
                 loading="lazy"
               />
               <h3>BRF.SE</h3>
-              <p>CASE 3: BRF.SE Hemsida, App & skärm 2025 Skolprojekt</p>
+              <p>Hemsida, App & Skärm | Skolprojekt 2025</p>
               <a href="case4.html" class="btn case-btn">Utforska Case</a>
             </article>
             <article class="case-card" data-category="social">
@@ -130,21 +127,19 @@
                 loading="lazy"
               />
               <h3>Closely</h3>
-              <p>Case 2: 2025 SOCIAL MEDIA Skolprojekt</p>
+              <p>Social Media App | Skolprojekt 2025</p>
               <a href="case5.html" class="btn case-btn">Utforska Case</a>
             </article>
-            <article class="case-card" data-category="sharepoint">
+            <article class="case-card" data-category="ux">
               <img
-                src="img/case1.jpg"
-                alt="Club AFRY Sharepoint - Sharepoint Redesign"
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2520&auto=format&fit=crop"
+                alt="Klädbutiken - Minska svinn projekt"
                 loading="lazy"
+                style="object-position: top"
               />
-              <h3>Club AFRY Sharepoint</h3>
-              <p>CASE 6: Club AFRY Projekt: Sharepoint Redesign AFRY Praktik</p>
-              <p class="case-insikter">
-                Insikter: Kundkontakt, Designprocess, Självständigt arbete.
-              </p>
-              <a href="case1.html" class="btn case-btn">Utforska Case</a>
+              <h3>Klädbutiken</h3>
+              <p>Minska svinn & Hållbarhet | UX Research</p>
+              <a href="case6.html" class="btn case-btn">Utforska Case</a>
             </article>
           </div>
         </div>
@@ -179,19 +174,29 @@
             en viktig del av mitt liv.
           </p>
 
-          <div class="about-images">
-            <img
-              src="img/nissegitarr.webp"
-              alt="Nisse spelar gitarr"
-              loading="lazy"
-            />
-            <img
-              src="img/nisseandy.avif"
-              alt="Nisse springer med Andy McCoy"
-              loading="lazy"
-            />
-            <img src="img/kids.avif" alt="Nisses barn" loading="lazy" />
-          </div>
+          <figure class="about-images">
+            <figcaption>
+              På min fritid älskar jag att spela musik, träna och umgås med
+              familjen.
+            </figcaption>
+            <div class="about-images-grid">
+              <img
+                src="img/nissegitarr.webp"
+                alt="Nisse spelar gitarr"
+                loading="lazy"
+              />
+              <img
+                src="img/nisseandy.avif"
+                alt="Nisse springer med Andy McCoy från Hanoi Rocks"
+                loading="lazy"
+              />
+              <img
+                src="img/kids.avif"
+                alt="Nisses barn på en strand"
+                loading="lazy"
+              />
+            </div>
+          </figure>
 
           <div class="about-btn-container">
             <a href="#contact" class="btn">Kontakta mig</a>
@@ -203,11 +208,6 @@
       <section id="contact" aria-label="Kontakt">
         <div class="contact-container">
           <h2>Kontakta mig</h2>
-          <img
-            src="img/cropped-Nisse1.jpg"
-            alt="Porträtt av Nisse Lindberg"
-            loading="lazy"
-          />
           <p>
             Tveka inte att mejla eller ringa mig!<br />
             <strong>E-post:</strong>
@@ -215,10 +215,6 @@
             ><br />
             <strong>Telefon:</strong>
             <a href="tel:+46738700666">+46 738 700 666</a>
-          </p>
-          <p class="contact-cta">
-            Vill du komma i kontakt? Skriv till mig på:
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
           </p>
           <a
             href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
@@ -229,7 +225,7 @@
       </section>
     </main>
 
-    <footer role="contentinfo">
+    <footer>
       <p>
         &copy; 2025 Nisse Lindberg |
         <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
