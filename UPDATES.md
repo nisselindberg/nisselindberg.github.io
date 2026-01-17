@@ -177,5 +177,5 @@ Dark mode aktiveras automatiskt baserat på:
 
 ---
 
-**Uppdaterad:** 14 December 2025
+**Uppdaterad:** 17 Januari 2026
 **Portfolio:** Nisse Lindberg - UX Designer
