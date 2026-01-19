@@ -2,6 +2,94 @@
 (function () {
   "use strict";
 
+  // Translations configuration
+  const translations = {
+    sv: {
+      "nav.home": "Hem",
+      "nav.work": "Arbete",
+      "nav.about": "Om mig",
+      "nav.contact": "Kontakt",
+      "hero.title": "Nisse Lindberg",
+      "hero.subtitle":
+        "Jag är Nisse - en UX Designer som förenklar komplexitet och levererar effektiva lösningar. Kreativa processer är min största passion.",
+      "hero.cv": "Ladda ned CV",
+      "hero.email": "Skicka E-post",
+      "work.title": "Min expertis",
+      "work.desc":
+        "Jag specialiserar mig på att skapa användarcentrerade designer som förbättrar användarupplevelsen och ökar engagemanget. Mina färdigheter inkluderar användarforskning, wireframing, prototypering och användbarhetstest.",
+      "case.btn": "Utforska Case",
+      "case1.desc": "Sharepoint Redesign | AFRY Praktik",
+      "case2.desc": "ForestKIT | AFRY Praktik",
+      "case3.desc": "Logo Design & UI Design | Elva Group",
+      "case4.desc": "Hemsida, App & Skärm | Skolprojekt 2025",
+      "case5.desc": "Social Media App | Skolprojekt 2025",
+      "case6.desc": "Minska svinn & Hållbarhet | UX Research",
+      "about.title": "Om mig",
+      "about.text":
+        "Hej! Jag heter Nisse Lindberg och läser mitt andra år för att bli UX Designer på IT-Högskolan. Kreativa processer är en av mina största passioner i livet. Jag gillar att tackla utmaningar och samarbeta med andra för att skapa effektiva lösningar. Jag designar med syfte, alltid med användaren i åtanke för att skapa intuitiva och meningsfulla upplevelser.",
+      "about.services": "Tjänster:",
+      "about.service1": "Användarforskning",
+      "about.service2": "Användbarhetstest",
+      "about.service3": "Wireframing",
+      "about.service4": "Prototypering",
+      "about.service5": "Tillgänglig Design",
+      "about.personal": "Personligt:",
+      "about.personal_text":
+        "Jag är 44 år gammal förälder till små barn och tidigare musikant från Göteborg. Jag älskar att träna, resa och spela musik. Musik är en viktig del av mitt liv.",
+      "about.caption":
+        "På min fritid älskar jag att spela musik, träna och umgås med familjen.",
+      "about.btn": "Kontakta mig",
+      "contact.title": "Kontakta mig",
+      "contact.intro": "Tveka inte att mejla eller ringa mig!",
+      "contact.email": "E-post:",
+      "contact.phone": "Telefon:",
+      "contact.btn": "Skicka E-post",
+    },
+    en: {
+      "nav.home": "Home",
+      "nav.work": "Work",
+      "nav.about": "About",
+      "nav.contact": "Contact",
+      "hero.title": "Nisse Lindberg",
+      "hero.subtitle":
+        "I'm Nisse - a UX Designer simplifying complexity and delivering effective solutions. Creative processes are my greatest passion.",
+      "hero.cv": "Download CV",
+      "hero.email": "Send Email",
+      "work.title": "My Expertise",
+      "work.desc":
+        "I specialize in creating user-centered designs that improve user experience and increase engagement. My skills include user research, wireframing, prototyping, and usability testing.",
+      "case.btn": "Explore Case",
+      "case1.desc": "Sharepoint Redesign | AFRY Internship",
+      "case2.desc": "ForestKIT | AFRY Internship",
+      "case3.desc": "Logo Design & UI Design | Elva Group",
+      "case4.desc": "Website, App & Screen | School Project 2025",
+      "case5.desc": "Social Media App | School Project 2025",
+      "case6.desc": "Reduce Waste & Sustainability | UX Research",
+      "about.title": "About Me",
+      "about.text":
+        "Hi! I'm Nisse Lindberg, a second-year UX Design student at IT-Högskolan. Creative processes are one of my greatest passions in life. I enjoy tackling challenges and collaborating with others to create effective solutions. I design with purpose, always keeping the user in mind to create intuitive and meaningful experiences.",
+      "about.services": "Services:",
+      "about.service1": "User Research",
+      "about.service2": "Usability Testing",
+      "about.service3": "Wireframing",
+      "about.service4": "Prototyping",
+      "about.service5": "Accessible Design",
+      "about.personal": "Personal:",
+      "about.personal_text":
+        "I am a 44-year-old parent of small children and a former musician from Gothenburg. I love working out, traveling, and playing music. Music is an important part of my life.",
+      "about.caption":
+        "In my spare time, I love playing music, working out, and spending time with my family.",
+      "about.btn": "Contact Me",
+      "contact.title": "Contact Me",
+      "contact.intro": "Don't hesitate to email or call me!",
+      "contact.email": "Email:",
+      "contact.phone": "Phone:",
+      "contact.btn": "Send Email",
+    },
+  };
+
+  let currentLang = localStorage.getItem("lang") || "sv";
+
   function initSmoothScroll() {
     // Handle both in-page anchors (`#id`) and same-page links like
     // `index.html#about`. Only smooth-scroll for links that point to the
