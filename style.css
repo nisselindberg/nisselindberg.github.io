@@ -1044,6 +1044,9 @@ footer a:hover {
   }
 
   .theme-toggle {
+    position: absolute;
+    right: var(--spacing-md);
+    top: var(--spacing-sm);
     width: 40px;
     height: 40px;
     font-size: 1rem;
