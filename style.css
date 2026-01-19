@@ -1019,7 +1019,7 @@ footer a:hover {
 @media (max-width: 768px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 16px; /* Behåll läsbar storlek på mobil */
   }
 
   header {
@@ -1039,8 +1039,8 @@ footer a:hover {
   }
 
   nav a {
-    padding: 0.35rem 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem; /* Större klickytor */
+    font-size: 1rem;
   }
 
   .theme-toggle {
@@ -1056,16 +1056,16 @@ footer a:hover {
   }
 
   .hero-container h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Större rubrik */
   }
 
   .hero-container h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .hero-container img {
-    width: 150px;
-    height: 150px;
+    width: 220px; /* Mycket större profilbild */
+    height: 220px;
   }
 
   .nav-buttons {
@@ -1075,6 +1075,10 @@ footer a:hover {
   .btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .case-card img {
+    height: 240px; /* Högre bilder på case-korten */
   }
 
   .cases {
@@ -1107,7 +1111,7 @@ footer a:hover {
 @media (max-width: 480px) {
   html,
   body {
-    font-size: 13px;
+    font-size: 16px; /* Ingen minskning på små skärmar */
   }
 
   header {
@@ -1123,16 +1127,16 @@ footer a:hover {
   }
 
   .hero-container h1 {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
   }
 
   .hero-container h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .hero-container img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
 
   .case-card {
