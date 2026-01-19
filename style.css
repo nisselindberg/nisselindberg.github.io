@@ -6,9 +6,9 @@
   /* Colors */
   --color-primary: #000000;
   --color-secondary: #ffffff;
-  --color-accent: #f7e1ff;
-  --color-accent-hover: #e8c9ff;
-  --color-glow: #d8b4fe; /* Mörkare lila för att synas mot vit bakgrund */
+  --color-accent: #7dff7d; /* Bright green */
+  --color-accent-hover: #5cd65c;
+  --color-glow: #bfdbfe; /* Light blue glow for AI gradient in light mode */
   --color-text: #000000;
   --color-text-light: #666666;
   --color-bg: #ffffff;
@@ -43,31 +43,32 @@
   /* Z-index */
   --z-nav: 1000;
   --z-modal: 1100;
-  /* Purple vibe */
-  --color-purple: #5b2a86;
-  --color-purple-hover: #6e3aa7;
 }
 
 /* Allow explicit theme switching via data-theme attribute */
 :root[data-theme="dark"] {
   --color-primary: #ffffff;
-  --color-secondary: #1a1a1a;
-  --color-accent: #3d2e47;
-  --color-accent-hover: #4a3a55;
-  --color-glow: var(--color-accent); /* Behåll samma färg i dark mode */
+  --color-secondary: #020617; /* Dark dark blue */
+  --color-accent: #3b82f6; /* Tech Blue */
+  --color-accent-hover: #2563eb;
+  --color-glow: #172554; /* Mysterious deep blue glow */
   --color-text: #ffffff;
   --color-text-light: #cccccc;
-  --color-bg: #1a1a1a;
-  --color-bg-alt: #2a2a2a;
-  --color-border: #3a3a3a;
+  --color-bg: radial-gradient(
+    ellipse at 50% 100%,
+    #1e40af 0%,
+    #020617 70%
+  ); /* Mysterious gradient from bottom */
+  --color-bg-alt: #1e293b;
+  --color-border: #374151;
 }
 
 :root[data-theme="light"] {
   /* keep defaults in :root; explicit light theme ensures predictability */
   --color-primary: #000000;
   --color-secondary: #ffffff;
-  --color-accent: #f7e1ff;
-  --color-accent-hover: #e8c9ff;
+  --color-accent: #7dff7d;
+  --color-accent-hover: #5cd65c;
   --color-text: #000000;
   --color-text-light: #666666;
   --color-bg: #ffffff;
@@ -79,15 +80,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-primary: #ffffff;
-    --color-secondary: #1a1a1a;
-    --color-accent: #3d2e47;
-    --color-accent-hover: #4a3a55;
-    --color-glow: var(--color-accent);
+    --color-secondary: #020617;
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
+    --color-glow: #172554;
     --color-text: #ffffff;
     --color-text-light: #cccccc;
-    --color-bg: #1a1a1a;
-    --color-bg-alt: #2a2a2a;
-    --color-border: #3a3a3a;
+    --color-bg: radial-gradient(ellipse at 50% 100%, #1e40af 0%, #020617 70%);
+    --color-bg-alt: #1e293b;
+    --color-border: #374151;
   }
 }
 
@@ -115,9 +116,9 @@ body {
   font-weight: 200;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-bg);
-  transition: background-color var(--transition-normal),
-    color var(--transition-normal);
+  background: var(--color-bg);
+  background-attachment: fixed; /* Ensure gradient covers full scroll */
+  transition: color var(--transition-normal);
   overflow-x: hidden;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
@@ -273,7 +274,8 @@ header {
   background: transparent !important; /* allow nav background to show through */
   z-index: var(--z-nav);
   box-shadow: none !important;
-  transition: box-shadow var(--transition-normal),
+  transition:
+    box-shadow var(--transition-normal),
     background-color var(--transition-normal);
   border: none !important;
   margin: 0 !important;
@@ -339,7 +341,7 @@ nav a:hover {
 }
 
 nav a:focus {
-  outline: 3px solid var(--color-purple);
+  outline: 3px solid var(--color-accent);
   outline-offset: 3px;
   background-color: var(--color-accent);
   color: var(--color-text);
@@ -373,7 +375,7 @@ nav a.active {
 }
 
 .theme-toggle:focus {
-  outline: 2px solid var(--color-purple);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
@@ -561,6 +563,8 @@ nav a.active {
   width: 100%;
   border-radius: var(--radius-md);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .project-content {
@@ -636,6 +640,8 @@ footer .contact-container {
   font-weight: 200;
   margin: 0;
   line-height: 1.2;
+  width: 100%;
+  text-align: left;
 }
 
 .hero-container h2 {
@@ -644,6 +650,7 @@ footer .contact-container {
   line-height: 1.5;
   text-align: left;
   margin: 0;
+  width: 100%;
 }
 
 .hero-container img {
@@ -956,7 +963,7 @@ footer .contact-container {
    ======================================== */
 
 footer {
-  background-color: var(--color-bg-alt);
+  background-color: transparent;
   text-align: center;
   padding: var(--spacing-lg);
   font-size: var(--font-size-small);

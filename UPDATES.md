@@ -94,25 +94,13 @@
 ## 🎨 CSS-Variabler
 
 ```css
---color-primary: #000000
---color-secondary: #ffffff
---color-accent: #f7e1ff
---color-accent-hover: #e8c9ff
---color-text: #000000
---color-text-light: #666666
---color-bg: #ffffff
---color-bg-alt: #f7f7f7
-
---spacing-xs: 0.25rem
---spacing-sm: 0.5rem
---spacing-md: 1rem
---spacing-lg: 1.5rem
---spacing-xl: 2rem
---spacing-2xl: 4rem
-
---transition-fast: 0.2s ease
---transition-normal: 0.3s ease
---transition-slow: 0.6s ease
+--color-primary: #000000 --color-secondary: #ffffff --color-accent: #f7e1ff
+  --color-accent-hover: #e8c9ff --color-text: #000000
+  --color-text-light: #666666 --color-bg: #ffffff --color-bg-alt: #f7f7f7
+  --spacing-xs: 0.25rem --spacing-sm: 0.5rem --spacing-md: 1rem
+  --spacing-lg: 1.5rem --spacing-xl: 2rem --spacing-2xl: 4rem
+  --transition-fast: 0.2s ease --transition-normal: 0.3s ease
+  --transition-slow: 0.6s ease;
 ```
 
 ## 🌙 Dark Mode

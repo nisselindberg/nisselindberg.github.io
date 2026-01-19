@@ -137,7 +137,7 @@
           }
         });
       },
-      { rootMargin: "100px" }
+      { rootMargin: "100px" },
     );
     imgs.forEach((i) => io.observe(i));
   }
