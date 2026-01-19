@@ -1035,12 +1035,12 @@ footer a:hover {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs); /* Mindre gap mellan knapparna */
   }
 
   nav a {
-    padding: 0.5rem 0.75rem; /* Större klickytor */
-    font-size: 1rem;
+    padding: 0.4rem 0.5rem; /* Mindre padding */
+    font-size: 0.9rem; /* Mindre text för att spara plats */
   }
 
   .theme-toggle {
