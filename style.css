@@ -1027,9 +1027,8 @@ footer a:hover {
   }
 
   nav {
-    flex-direction: column;
+    justify-content: center;
     gap: var(--spacing-sm);
-    align-items: center;
   }
 
   nav ul {
