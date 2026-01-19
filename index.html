@@ -17,7 +17,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    <link href="style.css?v=2.2" rel="stylesheet" />
+    <link href="style.css?v=2.3" rel="stylesheet" />
   </head>
   <body>
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
@@ -25,11 +25,18 @@
     <header>
       <nav aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="#home">Hem</a></li>
-          <li><a href="#work">Arbete</a></li>
-          <li><a href="#about">Om mig</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="#about" data-i18n="nav.about">Om mig</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
+        <button
+          class="lang-toggle"
+          aria-label="Byt språk"
+          style="margin-left: auto"
+        >
+          <span class="lang-text">SV</span>
+        </button>
         <button
           class="theme-toggle"
           aria-label="Slå på/av mörkt läge"
@@ -44,25 +51,33 @@
       <!-- Home Section -->
       <section id="home" aria-label="Hem">
         <div class="hero-container">
-          <h1 data-aos="fade-up" data-aos-delay="500">Nisse Lindberg</h1>
+          <h1 data-aos="fade-up" data-aos-delay="500" data-i18n="hero.title">
+            Nisse Lindberg
+          </h1>
           <img
             src="img/cropped-Nisse1.jpg"
             alt="Porträtt av Nisse Lindberg, UX Designer"
             loading="lazy"
           />
-          <h2 data-aos="fade-up" data-aos-delay="800">
+          <h2 data-aos="fade-up" data-aos-delay="800" data-i18n="hero.subtitle">
             Jag är Nisse - en UX Designer som förenklar komplexitet och
             levererar effektiva lösningar. Kreativa processer är min största
             passion.
           </h2>
           <div class="nav-buttons">
-            <a href="CV25.pdf" class="btn" download aria-label="Ladda ned CV"
+            <a
+              href="CV25.pdf"
+              class="btn"
+              download
+              aria-label="Ladda ned CV"
+              data-i18n="hero.cv"
               >Ladda ned CV</a
             >
             <a
               href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
               class="btn"
               aria-label="Skicka e-post till Nisse"
+              data-i18n="hero.email"
               >Skicka E-post</a
             >
           </div>

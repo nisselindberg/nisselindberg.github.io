@@ -200,6 +200,40 @@
     });
   }
 
+  function updateLanguage(lang) {
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+
+    // Update button text
+    const langBtnText = document.querySelector(".lang-text");
+    if (langBtnText) {
+      langBtnText.textContent = lang.toUpperCase();
+    }
+
+    // Save preference
+    localStorage.setItem("lang", lang);
+    document.documentElement.setAttribute("lang", lang);
+    currentLang = lang;
+  }
+
+  function initLanguageToggle() {
+    const langBtn = document.querySelector(".lang-toggle");
+    if (!langBtn) return;
+
+    // Set initial language
+    updateLanguage(currentLang);
+
+    langBtn.addEventListener("click", () => {
+      const newLang = currentLang === "sv" ? "en" : "sv";
+      updateLanguage(newLang);
+    });
+  }
+
   function initLenis() {
     // Check if Lenis is loaded
     if (typeof Lenis === "undefined") return;
@@ -235,6 +269,7 @@
     initButtonClickEffect();
     initCaseCardLinks();
     initThemeToggle();
+    initLanguageToggle();
     initLazyLoading();
     initKeyboardNav();
   });
