@@ -641,14 +641,14 @@ footer .contact-container {
   margin: 0;
   line-height: 1.2;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .hero-container h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 200;
   line-height: 1.5;
-  text-align: left;
+  text-align: center;
   margin: 0;
   width: 100%;
 }
