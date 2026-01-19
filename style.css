@@ -309,6 +309,7 @@ nav {
   gap: var(--spacing-lg);
   background-color: transparent;
   border: none;
+  position: relative;
 }
 
 nav ul {
@@ -366,7 +367,7 @@ nav a.active {
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
-  margin-left: auto; /* push to right */
+  margin-left: auto;
 }
 
 .theme-toggle:hover {
@@ -802,9 +803,8 @@ footer .contact-container {
 }
 
 .case-btn {
-  position: absolute;
-  bottom: var(--spacing-md);
-  right: var(--spacing-md);
+  margin-top: auto;
+  align-self: flex-end;
   padding: 0.5rem 0.8rem;
   font-size: var(--font-size-small);
   background-color: rgba(0, 0, 0, 0.1);
@@ -1017,6 +1017,16 @@ footer a:hover {
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* Öka kontrasten för text i light mode på mobil */
+  :root,
+  :root[data-theme="light"] {
+    --color-text-light: #000000;
+  }
+
+  :root[data-theme="dark"] {
+    --color-text-light: #ffffff;
+  }
+
   html,
   body {
     font-size: 16px; /* Behåll läsbar storlek på mobil */
@@ -1029,7 +1039,7 @@ footer a:hover {
   nav {
     justify-content: center;
     gap: var(--spacing-sm);
-    padding-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
   }
 
   nav ul {
