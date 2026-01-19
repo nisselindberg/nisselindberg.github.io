@@ -8,7 +8,7 @@
   --color-secondary: #ffffff;
   --color-accent: #7dff7d; /* Bright green */
   --color-accent-hover: #5cd65c;
-  --color-glow: #bfdbfe; /* Light blue glow for AI gradient in light mode */
+  --color-glow: transparent; /* Clean white background for light mode */
   --color-text: #000000;
   --color-text-light: #666666;
   --color-bg: #ffffff;
@@ -69,6 +69,7 @@
   --color-secondary: #ffffff;
   --color-accent: #7dff7d;
   --color-accent-hover: #5cd65c;
+  --color-glow: transparent;
   --color-text: #000000;
   --color-text-light: #666666;
   --color-bg: #ffffff;
@@ -1023,6 +1024,7 @@ footer a:hover {
   :root,
   :root[data-theme="light"] {
     --color-text-light: #000000;
+    --color-text: #000000;
   }
 
   :root[data-theme="dark"] {
@@ -1042,6 +1044,7 @@ footer a:hover {
     justify-content: center;
     gap: var(--spacing-sm);
     padding: var(--spacing-sm);
+    flex-wrap: wrap; /* Låt innehållet flöda så inget överlappar */
   }
 
   nav ul {
@@ -1057,22 +1060,11 @@ footer a:hover {
 
   .theme-toggle,
   .lang-toggle {
-    position: absolute;
-    top: var(--spacing-sm);
-    width: 40px;
-    height: 40px;
+    position: static; /* Ta bort absolut positionering för att undvika överlapp */
+    width: 36px; /* Lite mindre knappar */
+    height: 36px;
     font-size: 1rem;
     margin-left: 0;
-  }
-
-  .theme-toggle {
-    right: var(--spacing-md);
-  }
-
-  .lang-toggle {
-    right: calc(
-      var(--spacing-md) + 50px
-    ); /* Placera till vänster om tema-knappen */
   }
 
   #home {
