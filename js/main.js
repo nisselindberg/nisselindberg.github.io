@@ -25,7 +25,7 @@
       "case.challenge": "Utmaning",
       "case.solution": "Lösning",
       "case.back": "Tillbaka till portfolio",
-      "case1.title": "Sharepoint Redesign",
+      "case1.title": "Club AFRY Sharepoint",
       "case1.desc": "Sharepoint Redesign | AFRY Praktik",
       "case1.overview_text":
         "Under min praktik på AFRY arbetade jag med att designa om deras interna Sharepoint-sidor för att förbättra användarvänligheten och informationsstrukturen.",
@@ -41,7 +41,7 @@
         "Användarna upplevde kartfunktionen som komplex och svår att använda på mobila enheter.",
       "case2.solution_text":
         "Genom att förenkla gränssnittet och tydliggöra funktionerna skapade vi en smidigare upplevelse för fältarbete.",
-      "case3.title": "Logo Design & UI Design",
+      "case3.title": "Aireal Solutions",
       "case3.desc": "Logo Design & UI Design | Elva Group",
       "case3.overview_text":
         "Ett uppdrag för Elva Group som innefattade framtagning av ny logotyp och UI-design för deras digitala närvaro.",
@@ -57,7 +57,7 @@
         "Målet var att minska antalet steg i kassan och göra det enklare för kunder att filtrera produkter.",
       "case4.solution_text":
         "Resultatet blev en responsiv webbdesign och app-prototyp med fokus på tydlig navigation och snabb checkout.",
-      "case5.title": "Social Media App",
+      "case5.title": "Closely",
       "case5.desc": "Social Media App | Skolprojekt 2025",
       "case5.overview_text":
         "Design av en ny sociala medier-app fokuserad på lokala communities och evenemang.",
@@ -115,7 +115,7 @@
       "case.challenge": "Challenge",
       "case.solution": "Solution",
       "case.back": "Back to Portfolio",
-      "case1.title": "Sharepoint Redesign",
+      "case1.title": "Club AFRY Sharepoint",
       "case1.desc": "Sharepoint Redesign | AFRY Internship",
       "case1.overview_text":
         "During my internship at AFRY, I worked on redesigning their internal Sharepoint pages to improve usability and information structure.",
@@ -131,7 +131,7 @@
         "Users found the map function complex and difficult to use on mobile devices.",
       "case2.solution_text":
         "By simplifying the interface and clarifying functions, we created a smoother experience for field work.",
-      "case3.title": "Logo Design & UI Design",
+      "case3.title": "Aireal Solutions",
       "case3.desc": "Logo Design & UI Design | Elva Group",
       "case3.overview_text":
         "An assignment for Elva Group involving the creation of a new logo and UI design for their digital presence.",
@@ -147,7 +147,7 @@
         "The goal was to reduce the number of steps in the checkout process and make it easier for customers to filter products.",
       "case4.solution_text":
         "The result was a responsive web design and app prototype focusing on clear navigation and fast checkout.",
-      "case5.title": "Social Media App",
+      "case5.title": "Closely",
       "case5.desc": "Social Media App | School Project 2025",
       "case5.overview_text":
         "Design of a new social media app focused on local communities and events.",
@@ -155,7 +155,7 @@
         "To create a platform that encourages physical meetings rather than just digital interaction.",
       "case5.solution_text":
         "An app that highlights local events and makes it easy to create and join groups based on interests.",
-      "case6.title": "Reduce Waste",
+      "case6.title": "Minska Svinn",
       "case6.desc": "Reduce Waste & Sustainability | UX Research",
       "case6.overview_text":
         "A research project on how digital tools can help households reduce their food waste.",
