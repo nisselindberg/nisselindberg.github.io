@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Klädbutiken - Case study av Nisse Lindberg"
+      content="Case study: Minska Svinn - UX Design av Nisse Lindberg"
     />
     <title>Klädbutiken | Nisse Lindberg</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,12 @@
     <header role="banner">
       <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Hem</a></li>
-          <li><a href="index.html#work">Arbete</a></li>
-          <li><a href="index.html#about">Om mig</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="index.html#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Om mig</a></li>
+          <li>
+            <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -35,137 +37,108 @@
         >
           <span class="theme-icon">🌙</span>
         </button>
+        <button class="lang-toggle" aria-label="Byt språk">
+          <span class="lang-text">SV</span>
+        </button>
       </nav>
     </header>
 
-    <div
-      class="featured-image"
-      data-aos="fade-in"
-      style="
-        background-image: url(&quot;https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2670&auto=format&fit=crop&quot;);
-        height: 400px;
-        background-size: cover;
-        margin-top: 100px;
-      "
-      role="img"
-      aria-label="En modern klädbutik"
-    ></div>
-    <main id="main-content">
+    <main id="main-content" class="case-container">
       <article class="case-container case" aria-labelledby="case-title">
-        <h1 id="case-title" data-aos="fade-up">Klädbutiken</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Projekt:</strong> Konsumentbeteenden online |
-          <strong>Typ:</strong> Skolprojekt
-        </p>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Fokus:</strong> Hållbarhetsfokus och minskat svinn
+        <h1 id="case-title" data-aos="fade-up" data-i18n="case6.title">
+          Minska Svinn
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="case6.desc">
+          Minska svinn & Hållbarhet | UX Research
         </p>
 
         <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
-          <p><strong>Roll:</strong> UX Designer</p>
-          <p><strong>Verktyg:</strong> Figma, Miro, Dovetail, Procreate</p>
-          <p><strong>Team:</strong> 4 UX Designers</p>
-          <p><strong>Timeline:</strong> Aug – Dec 2024 (16 veckor)</p>
+          <div>
+            <strong data-i18n="case.role">Roll</strong>
+            <p>UX Designer</p>
+          </div>
+          <div>
+            <strong data-i18n="case.tools">Verktyg</strong>
+            <p>Figma, Miro, Dovetail</p>
+          </div>
+          <div>
+            <strong data-i18n="case.year">År</strong>
+            <p>2024</p>
+          </div>
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="200">Uppdrag</h2>
-        <p data-aos="fade-up" data-aos-delay="300">
-          Undersöka konsumentbeteenden i Klädbutiken för att minska svinn och
-          skapa mer hållbara onlineköp. Projektet syftar till att förstå
-          köpbeteenden och skapa lösningar för mindre returer.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="400">Mål</h2>
-        <p data-aos="fade-up" data-aos-delay="500">
-          Ta fram relevant information om köp- och returvanor samt hur
-          returnerade kläder hanteras. Minska svinn och påverka
-          konsumentbeteendet i e-handeln.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="600">Research</h2>
-        <p data-aos="fade-up" data-aos-delay="700">
-          Onlineenkät med 86 svar, användarintervjuer med 6 personer, skapande
-          av personas och user journey.
-        </p>
-
-        <div class="gallery-grid" data-aos="fade-up" data-aos-delay="800">
+        <div class="case-image" data-aos="fade-up" data-aos-delay="200">
           <img
             loading="lazy"
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2670&auto=format&fit=crop"
             alt="Ett team som genomför research och diskuterar idéer."
           />
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
-            alt="Två personer i en användarintervju."
-            style="object-position: top"
-          />
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2670&auto=format&fit=crop"
-            alt="Post-it-lappar som representerar olika användarpersonas."
-          />
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=2574&auto=format&fit=crop"
-            alt="En person som pekar på en skärm och analyserar data för personas."
-            style="object-position: top"
-          />
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=2670&auto=format&fit=crop"
-            alt="En whiteboard med en utritad user journey map."
-          />
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=2670&auto=format&fit=crop"
-            alt="Kläder som hänger på en ställning i en butik."
-          />
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="900">Skisser</h2>
-        <p data-aos="fade-up" data-aos-delay="1000">
-          Wireframes i Figma, från low-fidelity till high-fidelity prototyper.
+        <h2 data-aos="fade-up" data-aos-delay="300" data-i18n="case.overview">
+          Översikt
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-i18n="case6.overview_text"
+        >
+          Ett forskningsprojekt kring hur digitala verktyg kan hjälpa hushåll
+          att minska sitt matsvinn.
         </p>
 
-        <div class="case-image" data-aos="fade-up" data-aos-delay="1050">
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2564&auto=format&fit=crop"
-            alt="Exempel på wireframes och prototyper i Figma."
-          />
-        </div>
-
-        <h2 data-aos="fade-up" data-aos-delay="1100">Resultat</h2>
-        <p data-aos="fade-up" data-aos-delay="1200">
-          En prototyp som hjälper användare hitta rätt storlek direkt, vilket
-          minskar behovet av returer. Projektet visar hela designprocessen från
-          research till prototyp med fokus på användarvänlighet och hållbarhet.
+        <h2 data-aos="fade-up" data-aos-delay="500" data-i18n="case.challenge">
+          Utmaning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-i18n="case6.challenge_text"
+        >
+          Många vill minska sitt svinn men saknar verktyg för att hålla koll på
+          vad som finns hemma.
         </p>
 
-        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="1300">
-          <a
-            href="https://www.figma.com/design/PaRN4AEO74bITA0pcLHWHu/Prototyp-Kl%C3%A4dbutiken-Projekt?node-id=0-1&t=WMvglL2VLJMT57iO-1"
-            class="btn"
-            rel="noopener"
-            target="_blank"
-            >Testa prototypen</a
+        <h2 data-aos="fade-up" data-aos-delay="700" data-i18n="case.solution">
+          Lösning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-i18n="case6.solution_text"
+        >
+          Ett koncept för en app som hjälper användare att spåra utgångsdatum
+          och föreslår recept baserat på vad som finns i kylen.
+        </p>
+
+        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="900">
+          <a href="index.html#work" class="btn" data-i18n="case.back"
+            >Tillbaka till Portfolio</a
           >
-          <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
         </div>
       </article>
     </main>
 
     <footer role="contentinfo">
       <div class="contact-container">
-        <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>E-post:</strong>
+        <h2 data-aos="fade-up" data-i18n="contact.title">Kontakta mig</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="contact.intro">
+          Tveka inte att mejla eller ringa mig!
+        </p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          <strong data-i18n="contact.email">E-post:</strong>
           <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
           ><br />
-          <strong>Telefon:</strong>
+          <strong data-i18n="contact.phone">Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>
         </p>
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn"
+          data-i18n="contact.btn"
+          style="margin-top: 1rem"
+          >Skicka E-post</a
+        >
       </div>
     </footer>
 

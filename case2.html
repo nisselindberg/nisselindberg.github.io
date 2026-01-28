@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AFRY Smart Forestry - Case study av Nisse Lindberg"
+      content="Case study: ForestKIT - UX Design av Nisse Lindberg"
     />
     <title>AFRY Smart Forestry | Nisse Lindberg</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,12 @@
     <header role="banner">
       <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Hem</a></li>
-          <li><a href="index.html#work">Arbete</a></li>
-          <li><a href="index.html#about">Om mig</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="index.html#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Om mig</a></li>
+          <li>
+            <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -35,126 +37,108 @@
         >
           <span class="theme-icon">🌙</span>
         </button>
+        <button class="lang-toggle" aria-label="Byt språk">
+          <span class="lang-text">SV</span>
+        </button>
       </nav>
     </header>
 
-    <div
-      class="featured-image"
-      data-aos="fade-in"
-      style="
-        background-image: url(&quot;https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2670&auto=format&fit=crop&quot;);
-        height: 400px;
-        background-size: cover;
-        margin-top: 100px;
-      "
-      role="img"
-      aria-label="Drönarbild över en granskog"
-    ></div>
-    <main id="main-content">
+    <main id="main-content" class="case-container">
       <article class="case-container case" aria-labelledby="case-title">
-        <h1 id="case-title" data-aos="fade-up">AFRY Smart Forestry</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Projekt:</strong> ForestKIT | <strong>Typ:</strong> Praktik
+        <h1 id="case-title" data-aos="fade-up" data-i18n="case2.title">
+          ForestKIT
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="case2.desc">
+          ForestKIT | AFRY Praktik
         </p>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Insikter:</strong> Agilt arbetsätt, Figma kunskaper.
-        </p>
+
         <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
-          <p><strong>Roll:</strong> UX Designer</p>
-          <p><strong>Verktyg:</strong> Figma, Miro, Teams</p>
-          <p><strong>Team / Kund:</strong> Nisse Lindberg — AFRY</p>
+          <div>
+            <strong data-i18n="case.role">Roll</strong>
+            <p>UX Designer</p>
+          </div>
+          <div>
+            <strong data-i18n="case.tools">Verktyg</strong>
+            <p>Figma, Miro, Teams</p>
+          </div>
+          <div>
+            <strong data-i18n="case.year">År</strong>
+            <p>2024</p>
+          </div>
         </div>
 
-        <figure>
-          <iframe
-            width="730"
-            height="411"
-            src="https://www.youtube.com/embed/lJE3pOpWuOU?feature=oembed"
-            frameborder="0"
-            allowfullscreen
-            title="AFRY Smart Forestry video"
-          ></iframe>
-        </figure>
-
-        <figure>
+        <div class="case-image" data-aos="fade-up" data-aos-delay="200">
           <img
             loading="lazy"
-            src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=2831&auto=format&fit=crop"
+            src="img/case2.jpeg"
             alt="Skärmavbild från ForestKIT-projektet"
           />
-        </figure>
+        </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="300">Mål</h2>
-        <p data-aos="fade-up" data-aos-delay="400">
-          Att lära mig mer om hur ett agilt arbetssätt i team fungerar,
-          Figma-färdigheter samt övrigt UX-arbete.
+        <h2 data-aos="fade-up" data-aos-delay="300" data-i18n="case.overview">
+          Översikt
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-i18n="case2.overview_text"
+        >
+          ForestKIT är ett verktyg för skogsägare. Jag hjälpte till att
+          förbättra UX-designen för kartverktyget.
         </p>
 
-        <h2 data-aos="fade-up" data-aos-delay="500">Resultat</h2>
-        <p data-aos="fade-up" data-aos-delay="600">
-          2 Månader med teamet bakom AFRY Smart Forestry har givit mig rejält
-          med kött på benen inför framtiden, med allt vad det gäller att arbeta
-          i agila team och att presentera sin design för PO:s och stakeholders.
-          Dessutom var allt remote vilket gav bra träning i att arbeta i Figma
-          och samarbeta digitalt.
+        <h2 data-aos="fade-up" data-aos-delay="500" data-i18n="case.challenge">
+          Utmaning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-i18n="case2.challenge_text"
+        >
+          Användarna upplevde kartfunktionen som komplex och svår att använda på
+          mobila enheter.
         </p>
 
-        <figure>
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop"
-            alt="Skärmavbild som visar agilt arbete i Figma"
-          />
-        </figure>
-
-        <h2>Lärdomar</h2>
-        <p>
-          Att lära mig mer om hur ett agilt arbetssätt i team fungerar,
-          förbättra mina Figma‑färdigheter samt fördjupa övrigt UX‑arbete.
-        </p>
-        <p>
-          2 månader med teamet bakom AFRY Smart Forestry gav mig rejält med kött
-          på benen inför framtiden — allt från att arbeta i agila team till att
-          presentera design för PO:s och stakeholders. Projektet var helt remote
-          vilket också gav värdefull träning i att samarbeta i Figma och
-          kommunicera designbeslut digitalt.
+        <h2 data-aos="fade-up" data-aos-delay="700" data-i18n="case.solution">
+          Lösning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-i18n="case2.solution_text"
+        >
+          Genom att förenkla gränssnittet och tydliggöra funktionerna skapade vi
+          en smidigare upplevelse för fältarbete.
         </p>
 
-        <h2>Reflektion &amp; Analys</h2>
-        <p>
-          Det kan ta väldigt lång tid att komma in i projekt när en ny UX:are
-          kommer in. Att skapa sin egen struktur som hela teamet är med på tror
-          jag är viktigt för att göra ett bra jobb. Det är absolut ingen
-          självklarhet för en UX Designer att få en överlämning från tidigare UX
-          Designer, och utvecklingen forsätter gärna utan dokumentation vilket
-          ställer till det för UX Designern som bara har gammalt material att
-          jobba med och i mångt och mycket får börja från noll.
-        </p>
-
-        <figure>
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"
-            alt="Skärmavbild av designkomponenter i Figma"
-          />
-        </figure>
-
-        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="700">
-          <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
+        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="900">
+          <a href="index.html#work" class="btn" data-i18n="case.back"
+            >Tillbaka till Portfolio</a
+          >
         </div>
       </article>
     </main>
 
     <footer role="contentinfo">
       <div class="contact-container">
-        <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>E-post:</strong>
+        <h2 data-aos="fade-up" data-i18n="contact.title">Kontakta mig</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="contact.intro">
+          Tveka inte att mejla eller ringa mig!
+        </p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          <strong data-i18n="contact.email">E-post:</strong>
           <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
           ><br />
-          <strong>Telefon:</strong>
+          <strong data-i18n="contact.phone">Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>
         </p>
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn"
+          data-i18n="contact.btn"
+          style="margin-top: 1rem"
+          >Skicka E-post</a
+        >
       </div>
     </footer>
 

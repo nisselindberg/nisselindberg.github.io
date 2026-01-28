@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BRF.SE - Case study av Nisse Lindberg" />
-    <title>BRF.SE | Nisse Lindberg</title>
+    <meta
+      name="description"
+      content="Case study: Klädbutiken - UX Design av Nisse Lindberg"
+    />
+    <title>Case Klädbutiken | Nisse Lindberg</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,10 +23,12 @@
     <header role="banner">
       <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Hem</a></li>
-          <li><a href="index.html#work">Arbete</a></li>
-          <li><a href="index.html#about">Om mig</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="index.html#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Om mig</a></li>
+          <li>
+            <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -32,153 +37,104 @@
         >
           <span class="theme-icon">🌙</span>
         </button>
+        <button class="lang-toggle" aria-label="Byt språk">
+          <span class="lang-text">SV</span>
+        </button>
       </nav>
     </header>
 
-    <div
-      class="featured-image"
-      data-aos="fade-in"
-      style="
-        background-image: url(&quot;https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop&quot;);
-        height: 400px;
-        background-size: cover;
-        margin-top: 100px;
-      "
-      role="img"
-      aria-label="Exteriör av ett modernt bostadshus"
-    ></div>
-
-    <main id="main-content">
+    <main id="main-content" class="case-container">
       <article class="case-container case" aria-labelledby="case-title">
-        <h1 id="case-title" data-aos="fade-up">BRF.SE</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Projekt:</strong> Hemsida, App & skärm |
-          <strong>Typ:</strong> Skolprojekt 2025
+        <h1 id="case-title" data-aos="fade-up" data-i18n="case4.title">
+          Klädbutiken
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="case4.desc">
+          Hemsida, App & Skärm | Skolprojekt 2025
         </p>
 
         <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
-          <p><strong>Roll:</strong> UX Designer</p>
-          <p><strong>Fokus:</strong> Användarvänlighet, responsiv design</p>
-          <p><strong>År:</strong> 2025</p>
+          <div>
+            <strong data-i18n="case.role">Roll</strong>
+            <p>UX Designer</p>
+          </div>
+          <div>
+            <strong data-i18n="case.tools">Verktyg</strong>
+            <p>Figma, Miro</p>
+          </div>
+          <div>
+            <strong data-i18n="case.year">År</strong>
+            <p>2025</p>
+          </div>
         </div>
 
         <div class="case-image" data-aos="fade-up" data-aos-delay="200">
-          <img loading="lazy" src="img/case4.png" alt="BRF.SE Project" />
+          <img loading="lazy" src="img/case4.png" alt="Klädbutiken översikt" />
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="300">Om projektet</h2>
-        <p data-aos="fade-up" data-aos-delay="400">
-          Design av hemsida och app för BRF.SE med målet att förenkla
-          medlemskommunikation och förbättra användarupplevelsen. Implementering
-          av moderna UX-principer och tillgänglighet.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="500">Process</h2>
-        <p data-aos="fade-up" data-aos-delay="600">
-          Detta projekt visar designprocessen från research till färdig
-          prototyp. Målet var att skapa en intuitiv lösning som fungerar för
-          alla användare.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="500">Typografi & Färg</h2>
-        <div class="project-details" data-aos="fade-up" data-aos-delay="600">
-          <div class="detail-card">
-            <h3>Typografi</h3>
-            <p>Lexend (Rubriker)</p>
-            <p>Roboto (Brödtext)</p>
-            <p>SF Pro (UI-element)</p>
-          </div>
-          <div class="detail-card">
-            <h3>Färgpalett</h3>
-            <div style="display: flex; gap: 10px; margin-top: 10px">
-              <div
-                style="
-                  width: 40px;
-                  height: 40px;
-                  background-color: #4caf50;
-                  border-radius: 50%;
-                  border: 1px solid #ccc;
-                "
-                title="Grön"
-              ></div>
-              <div
-                style="
-                  width: 40px;
-                  height: 40px;
-                  background-color: #808000;
-                  border-radius: 50%;
-                  border: 1px solid #ccc;
-                "
-                title="Olivgrön"
-              ></div>
-              <div
-                style="
-                  width: 40px;
-                  height: 40px;
-                  background-color: #98ff98;
-                  border-radius: 50%;
-                  border: 1px solid #ccc;
-                "
-                title="Mintgrön"
-              ></div>
-            </div>
-          </div>
-        </div>
-
-        <section
-          class="project-gallery"
+        <h2 data-aos="fade-up" data-aos-delay="300" data-i18n="case.overview">
+          Översikt
+        </h2>
+        <p
           data-aos="fade-up"
-          data-aos-delay="900"
+          data-aos-delay="400"
+          data-i18n="case4.overview_text"
         >
-          <h2>Mockups</h2>
-          <div class="gallery-grid">
-            <img
-              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2670&auto=format&fit=crop"
-              alt="Desktop Mockup"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?q=80&w=2732&auto=format&fit=crop"
-              alt="Mobil Mockup"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1561154464-82e9adf32764?q=80&w=2574&auto=format&fit=crop"
-              alt="Tablet Mockup"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2592&auto=format&fit=crop"
-              alt="Wireframes på en whiteboard som visar designprocessen"
-              loading="lazy"
-            />
-          </div>
-        </section>
+          Ett skolprojekt där jag designade en e-handel för en klädbutik med
+          fokus på en sömlös köpupplevelse.
+        </p>
 
-        <div class="case-image" data-aos="fade-up" data-aos-delay="650">
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2574&auto=format&fit=crop"
-            alt="Exempel på app-design för BRF.SE"
-          />
-        </div>
+        <h2 data-aos="fade-up" data-aos-delay="500" data-i18n="case.challenge">
+          Utmaning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-i18n="case4.challenge_text"
+        >
+          Målet var att minska antalet steg i kassan och göra det enklare för
+          kunder att filtrera produkter.
+        </p>
 
-        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="700">
-          <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
+        <h2 data-aos="fade-up" data-aos-delay="700" data-i18n="case.solution">
+          Lösning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-i18n="case4.solution_text"
+        >
+          Resultatet blev en responsiv webbdesign och app-prototyp med fokus på
+          tydlig navigation och snabb checkout.
+        </p>
+
+        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="900">
+          <a href="index.html#work" class="btn" data-i18n="case.back"
+            >Tillbaka till Portfolio</a
+          >
         </div>
       </article>
     </main>
 
     <footer role="contentinfo">
       <div class="contact-container">
-        <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>E-post:</strong>
+        <h2 data-aos="fade-up" data-i18n="contact.title">Kontakta mig</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="contact.intro">
+          Tveka inte att mejla eller ringa mig!
+        </p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          <strong data-i18n="contact.email">E-post:</strong>
           <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
           ><br />
-          <strong>Telefon:</strong>
+          <strong data-i18n="contact.phone">Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>
         </p>
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn"
+          data-i18n="contact.btn"
+          style="margin-top: 1rem"
+          >Skicka E-post</a
+        >
       </div>
     </footer>
 

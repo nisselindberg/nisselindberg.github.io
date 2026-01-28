@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Club AFRY Sharepoint - Case study av Nisse Lindberg"
+      content="Case study: Sharepoint Redesign - UX Design av Nisse Lindberg"
     />
     <title>Club AFRY Sharepoint | Nisse Lindberg</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,12 @@
     <header role="banner">
       <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Hem</a></li>
-          <li><a href="index.html#work">Arbete</a></li>
-          <li><a href="index.html#about">Om mig</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="index.html#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Om mig</a></li>
+          <li>
+            <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -35,34 +37,34 @@
         >
           <span class="theme-icon">🌙</span>
         </button>
+        <button class="lang-toggle" aria-label="Byt språk">
+          <span class="lang-text">SV</span>
+        </button>
       </nav>
     </header>
 
-    <div
-      class="featured-image"
-      data-aos="fade-in"
-      style="
-        background-image: url(&quot;https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2684&auto=format&fit=crop&quot;);
-        height: 400px;
-        background-size: cover;
-        margin-top: 100px;
-      "
-      role="img"
-      aria-label="Team som samarbetar på ett kontor"
-    ></div>
-
-    <main id="main-content">
+    <main id="main-content" class="case-container">
       <article class="case-container case" aria-labelledby="case-title">
-        <h1 id="case-title" data-aos="fade-up">Club AFRY Sharepoint</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Projekt:</strong> Sharepoint Redesign |
-          <strong>Typ:</strong> Praktik
+        <h1 id="case-title" data-aos="fade-up" data-i18n="case1.title">
+          Sharepoint Redesign
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="case1.desc">
+          Sharepoint Redesign | AFRY Praktik
         </p>
 
         <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
-          <p><strong>Roll:</strong> UX Designer</p>
-          <p><strong>Verktyg:</strong> Figma, Miro, Teams</p>
-          <p><strong>Team / Kund:</strong> Nisse Lindberg — AFRY</p>
+          <div>
+            <strong data-i18n="case.role">Roll</strong>
+            <p>UX Designer</p>
+          </div>
+          <div>
+            <strong data-i18n="case.tools">Verktyg</strong>
+            <p>Figma, Miro, Teams</p>
+          </div>
+          <div>
+            <strong data-i18n="case.year">År</strong>
+            <p>2024</p>
+          </div>
         </div>
 
         <div class="case-image" data-aos="fade-up" data-aos-delay="200">
@@ -73,117 +75,71 @@
           />
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="300">Bakgrund</h2>
-        <p data-aos="fade-up" data-aos-delay="400">
-          Club AFRY behövde en ny Sharepoint-lösning som var användarvänlig och
-          skalbar. Fokus låg på informationsstruktur och intuitiv navigering för
-          medarbetare.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="450">Före</h2>
-        <p data-aos="fade-up" data-aos-delay="500">
-          Jag märkte ganska tidigt att vissa saker på Club AFRY´s
-          Sharepoint-sida var lite dolda. Utefter den research jag gjorde valde
-          jag att fokusera på att lyfta fram de största insikter vi fick fram,
-          vilket var att framhäva kommande event mer, plocka fram återkommande
-          event i ljuset, marknadsföra de största eventen mer, samt att göra det
-          enklare att boka eller önska en aktivitet.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="500">Lösning</h2>
-        <p data-aos="fade-up" data-aos-delay="600">
-          Vi genomförde användarintervjuer, wireframing och prototyping.
-          Resultatet blev en struktur som förbättrade navigationen och gjorde
-          viktig information lättillgänglig.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="700">Mål</h2>
-        <p data-aos="fade-up" data-aos-delay="800">
-          Att redesigna Club AFRY´s Sharepoint-site, marknadsföra plattformen
-          och göra den användarvänlig.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="900">Resultat</h2>
-        <p data-aos="fade-up" data-aos-delay="1000">
-          Som man kan se på bilden så har jag skapat en karusell för att visa de
-          största kommande eventen som Club AFRY har. Jag har lyft upp
-          möjligheten att skapa eller önska event, och att boka sig på
-          skidresan. Jag har dessutom låtit kommande event få en stor plats och
-          plockat fram återkommande event ur mörkret.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="1100">Lärdomar</h2>
-        <p data-aos="fade-up" data-aos-delay="1200">
-          Det har varit otroligt kul och spännande att rodda ett projekt helt
-          själv från ax till limpa och att få ha hand och rå om en kund helt
-          själv, men även att bolla design och ha en dialog samt process ihop
-          med kunden. Jag har lärt mig att ta stort eget ansvar och förvalta min
-          tid. Jag har lärt mig att göra snabb research, kunddialog, och att
-          tighta avstämningar är viktiga.
-        </p>
-
-        <section
-          class="project-gallery"
-          data-aos="fade-up"
-          data-aos-delay="900"
-        >
-          <h2>Designprocess</h2>
-          <div class="gallery-grid">
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2670&auto=format&fit=crop"
-              alt="Wireframes och skisser för Sharepoint-sidan"
-            />
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop"
-              alt="Designkomponenter skapade i Figma"
-            />
-          </div>
-        </section>
-
-        <div class="case-image" data-aos="fade-up" data-aos-delay="1250">
-          <img
-            loading="lazy"
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop"
-            alt="Exempel på den nya designen för Club AFRY's SharePoint-sida."
-          />
-        </div>
-
-        <h2 data-aos="fade-up" data-aos-delay="1300">Nästa steg</h2>
-        <p data-aos="fade-up" data-aos-delay="1400">
-          I deras process var det att implementera designen i SharePoint och
-          börja använda den. För att göra det ännu bättre hade de kunnat välja
-          ett annat verktyg än SharePoint, om det ändå bara används internt.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="1500">
-          Reflektion &amp; Analys
+        <h2 data-aos="fade-up" data-aos-delay="300" data-i18n="case.overview">
+          Översikt
         </h2>
-        <p data-aos="fade-up" data-aos-delay="1600">
-          Hade jag haft mer tid och resurser hade jag kunnat göra en mer
-          genomarbetad enkät och fått ett större scope på svar och kunnat hitta
-          mer input för att göra ett ännu större intervju-arbete. Jag hade
-          dessutom kunnat använda fler metoder. Det var ett bra arbete och
-          projekt utefter de resurser som fanns.
+        <p
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-i18n="case1.overview_text"
+        >
+          Under min praktik på AFRY arbetade jag med att designa om deras
+          interna Sharepoint-sidor för att förbättra användarvänligheten och
+          informationsstrukturen.
+        </p>
+
+        <h2 data-aos="fade-up" data-aos-delay="500" data-i18n="case.challenge">
+          Utmaning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-i18n="case1.challenge_text"
+        >
+          Den befintliga lösningen var svårnavigerad och medarbetarna hade svårt
+          att hitta relevant information snabbt.
+        </p>
+
+        <h2 data-aos="fade-up" data-aos-delay="700" data-i18n="case.solution">
+          Lösning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-i18n="case1.solution_text"
+        >
+          Jag tog fram en ny struktur och design som testades med användare och
+          implementerades, vilket resulterade i en mer intuitiv upplevelse.
         </p>
 
         <div class="nav-buttons" data-aos="fade-up" data-aos-delay="900">
-          <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
+          <a href="index.html#work" class="btn" data-i18n="case.back"
+            >Tillbaka till Portfolio</a
+          >
         </div>
       </article>
     </main>
 
     <footer role="contentinfo">
       <div class="contact-container">
-        <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>E-post:</strong>
+        <h2 data-aos="fade-up" data-i18n="contact.title">Kontakta mig</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="contact.intro">
+          Tveka inte att mejla eller ringa mig!
+        </p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          <strong data-i18n="contact.email">E-post:</strong>
           <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
-          ><br />
-          <strong>Telefon:</strong>
+          <br />
+          <strong data-i18n="contact.phone">Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>
         </p>
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn"
+          data-i18n="contact.btn"
+          style="margin-top: 1rem"
+          >Skicka E-post</a
+        >
       </div>
     </footer>
 

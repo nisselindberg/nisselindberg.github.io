@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="sv">
+<html lang="sv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Aireal Solutions - Case study av Nisse Lindberg"
+      content="Case study: Aireal Solutions - UX Design av Nisse Lindberg"
     />
     <title>Aireal Solutions | Nisse Lindberg</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,10 +23,12 @@
     <header role="banner">
       <nav role="navigation" aria-label="Huvudmeny">
         <ul class="main-menu">
-          <li><a href="index.html#home">Hem</a></li>
-          <li><a href="index.html#work">Arbete</a></li>
-          <li><a href="index.html#about">Om mig</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
+          <li><a href="index.html#home" data-i18n="nav.home">Hem</a></li>
+          <li><a href="index.html#work" data-i18n="nav.work">Arbete</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Om mig</a></li>
+          <li>
+            <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
+          </li>
         </ul>
         <button
           class="theme-toggle"
@@ -35,36 +37,34 @@
         >
           <span class="theme-icon">🌙</span>
         </button>
+        <button class="lang-toggle" aria-label="Byt språk">
+          <span class="lang-text">SV</span>
+        </button>
       </nav>
     </header>
 
-    <div
-      class="featured-image"
-      data-aos="fade-in"
-      style="
-        background-image: url(&quot;https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=2670&auto=format&fit=crop&quot;);
-        height: 400px;
-        background-size: cover;
-        margin-top: 100px;
-      "
-      role="img"
-      aria-label="Drönare som flyger över ett landskap"
-    ></div>
-    <main id="main-content">
+    <main id="main-content" class="case-container">
       <article class="case-container case" aria-labelledby="case-title">
-        <h1 id="case-title" data-aos="fade-up">Aireal Solutions</h1>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Projekt:</strong> Portal för drönartjänster |
-          <strong>Typ:</strong> Koncept & Visuellt arbete
-        </p>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>Kund:</strong> Elva Group
+        <h1 id="case-title" data-aos="fade-up" data-i18n="case3.title">
+          Logo Design & UI Design
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="case3.desc">
+          Logo Design & UI Design | Elva Group
         </p>
 
         <div class="case-meta" data-aos="fade-up" data-aos-delay="150">
-          <p><strong>Roll:</strong> UX/UI Designer</p>
-          <p><strong>Verktyg:</strong> Figma, Miro</p>
-          <p><strong>Uppdrag:</strong> Portal, logoförslag, designsystem</p>
+          <div>
+            <strong data-i18n="case.role">Roll</strong>
+            <p>UX/UI Designer</p>
+          </div>
+          <div>
+            <strong data-i18n="case.tools">Verktyg</strong>
+            <p>Figma, Miro</p>
+          </div>
+          <div>
+            <strong data-i18n="case.year">År</strong>
+            <p>2024</p>
+          </div>
         </div>
 
         <div class="case-image" data-aos="fade-up" data-aos-delay="200">
@@ -75,73 +75,70 @@
           />
         </div>
 
-        <h2 data-aos="fade-up" data-aos-delay="300">Om projektet</h2>
-        <p data-aos="fade-up" data-aos-delay="400">
-          Ett koncept- och visuellt arbete för Aireal Solutions, ett
-          drönarrelaterat projekt under Elva Group. Fokus låg på att skapa en
-          portal för drönartjänster med tydliga vyer och ett förslag till
-          designsystem.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="500">Mål</h2>
-        <p data-aos="fade-up" data-aos-delay="600">
-          Skapa en portal för en drönartjänst inklusive vyer och
-          designsystemförslag.
-        </p>
-
-        <h2 data-aos="fade-up" data-aos-delay="700">Resultat</h2>
-        <p data-aos="fade-up" data-aos-delay="800">
-          Skapade förslag till ny logo, hittade designsystem och gjorde vyer och
-          förslag på layout till en framtida portal. Gjorde även en enkät för
-          att samla krav och användarinsikter.
-        </p>
-
-        <section
-          class="project-gallery"
+        <h2 data-aos="fade-up" data-aos-delay="300" data-i18n="case.overview">
+          Översikt
+        </h2>
+        <p
           data-aos="fade-up"
-          data-aos-delay="900"
+          data-aos-delay="400"
+          data-i18n="case3.overview_text"
         >
-          <h2>Exempel på sidor</h2>
-          <div class="gallery-grid">
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2670&auto=format&fit=crop"
-              alt="Portal vy – startsida"
-            />
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2674&auto=format&fit=crop"
-              alt="Portal vy – kartvy"
-            />
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"
-              alt="Dashboard med grafer och data"
-            />
-            <img
-              loading="lazy"
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop"
-              alt="Designsystem exempel"
-            />
-          </div>
-        </section>
+          Ett uppdrag för Elva Group som innefattade framtagning av ny logotyp
+          och UI-design för deras digitala närvaro.
+        </p>
 
-        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="1000">
-          <a href="index.html#work" class="btn">Tillbaka till Portfolio</a>
+        <h2 data-aos="fade-up" data-aos-delay="500" data-i18n="case.challenge">
+          Utmaning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="600"
+          data-i18n="case3.challenge_text"
+        >
+          Företaget saknade en tydlig visuell identitet som speglade deras
+          moderna arbetssätt.
+        </p>
+
+        <h2 data-aos="fade-up" data-aos-delay="700" data-i18n="case.solution">
+          Lösning
+        </h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-i18n="case3.solution_text"
+        >
+          Jag skapade en stilren och modern visuell identitet samt
+          UI-komponenter för deras webb.
+        </p>
+
+        <div class="nav-buttons" data-aos="fade-up" data-aos-delay="900">
+          <a href="index.html#work" class="btn" data-i18n="case.back"
+            >Tillbaka till Portfolio</a
+          >
         </div>
       </article>
     </main>
 
     <footer role="contentinfo">
       <div class="contact-container">
-        <h2 data-aos="fade-up">Vill du komma i kontakt?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">
-          <strong>E-post:</strong>
+        <h2 data-aos="fade-up" data-i18n="contact.title">Kontakta mig</h2>
+        <p data-aos="fade-up" data-aos-delay="100" data-i18n="contact.intro">
+          Tveka inte att mejla eller ringa mig!
+        </p>
+        <p data-aos="fade-up" data-aos-delay="150">
+          <strong data-i18n="contact.email">E-post:</strong>
           <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
           ><br />
-          <strong>Telefon:</strong>
+          <strong data-i18n="contact.phone">Telefon:</strong>
           <a href="tel:+46738700666">+46 738 700 666</a>
         </p>
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn"
+          data-i18n="contact.btn"
+          style="margin-top: 1rem"
+          >Skicka E-post</a
+        >
       </div>
     </footer>
 
