@@ -24,6 +24,10 @@
       "case.overview": "Översikt",
       "case.challenge": "Utmaning",
       "case.solution": "Lösning",
+      "case.process": "Process",
+      "case.process_text":
+        "Här kan du beskriva din arbetsprocess, från research till färdig design.",
+      "case.gallery": "Galleri",
       "case.back": "Tillbaka till portfolio",
       "case1.title": "Club AFRY Sharepoint",
       "case1.desc": "Sharepoint Redesign | AFRY Praktik",
@@ -114,6 +118,10 @@
       "case.overview": "Overview",
       "case.challenge": "Challenge",
       "case.solution": "Solution",
+      "case.process": "Process",
+      "case.process_text":
+        "Here you can describe your work process, from research to final design.",
+      "case.gallery": "Gallery",
       "case.back": "Back to Portfolio",
       "case1.title": "Club AFRY Sharepoint",
       "case1.desc": "Sharepoint Redesign | AFRY Internship",
@@ -155,7 +163,7 @@
         "To create a platform that encourages physical meetings rather than just digital interaction.",
       "case5.solution_text":
         "An app that highlights local events and makes it easy to create and join groups based on interests.",
-      "case6.title": "Minska Svinn",
+      "case6.title": "Reduce Waste",
       "case6.desc": "Reduce Waste & Sustainability | UX Research",
       "case6.overview_text":
         "A research project on how digital tools can help households reduce their food waste.",
