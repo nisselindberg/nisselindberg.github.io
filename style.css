@@ -1108,14 +1108,14 @@ footer a:hover {
     padding: 0 var(--spacing-sm);
   }
 
-  .about-images {
+  .about-images-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
   .about-images img {
-    width: 100%;
-    height: 250px;
+    /* Låt aspect-ratio styra höjden så de förblir runda */
+    height: auto;
   }
 
   .contact-container img {
