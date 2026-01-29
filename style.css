@@ -130,20 +130,6 @@ body {
   background-color: transparent;
 }
 
-/* Lenis Smooth Scroll recommended styles */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
 h1,
 h2,
 h3,
@@ -162,25 +148,6 @@ html::after,
 body::after {
   display: none !important;
   content: none !important;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150vw;
-  height: 150vh;
-  background: radial-gradient(
-    circle at center,
-    var(--color-glow) 0%,
-    transparent 60%
-  );
-  filter: blur(80px);
-  z-index: 0;
-  pointer-events: none;
-  animation: gradient-pulse 10s ease-in-out infinite alternate;
 }
 
 body.dark-mode {
@@ -215,50 +182,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-/* ========================================
-  KEYFRAME ANIMATIONS
-  ======================================== */
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-4px);
-  }
-  50% {
-    transform: translateX(4px);
-  }
-  75% {
-    transform: translateX(-4px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes gradient-pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.3);
-    opacity: 0.8;
-  }
 }
 
 /* ========================================

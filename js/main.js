@@ -264,91 +264,6 @@
     });
   }
 
-  function initNavHoverEffect() {
-    // Removed inline style manipulation - CSS handles hover effects
-    // This prevents conflicts with CSS transitions
-  }
-
-  function createSparkle(x, y) {
-    const sparkle = document.createElement("span");
-    sparkle.textContent = "✦";
-    sparkle.style.position = "fixed";
-    sparkle.style.pointerEvents = "none";
-    sparkle.style.left = x + "px";
-    sparkle.style.top = y + "px";
-    sparkle.style.opacity = 1;
-    sparkle.style.fontSize = "12px";
-    sparkle.style.transition = "transform 0.6s, opacity 0.6s";
-    sparkle.style.zIndex = "9999";
-    document.body.appendChild(sparkle);
-
-    const angle = Math.random() * Math.PI * 2;
-    const distance = 20 + Math.random() * 40;
-    sparkle.style.transform = `translate(${Math.cos(angle) * distance}px, ${
-      Math.sin(angle) * distance
-    }px)`;
-    sparkle.style.opacity = 0;
-    setTimeout(() => sparkle.remove(), 700);
-  }
-
-  function initSparkleEffect() {
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener("mouseenter", (e) => {
-        for (let i = 0; i < 3; i++) createSparkle(e.pageX, e.pageY);
-      });
-    });
-  }
-
-  function initButtonClickEffect() {
-    document.querySelectorAll(".btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        btn.style.animation = "shake 0.25s";
-        setTimeout(() => (btn.style.animation = ""), 250);
-      });
-    });
-  }
-
-  function initLazyLoading() {
-    // Native lazy loading is handled by the browser via loading="lazy" attribute
-    // This function is kept for potential future enhancements
-    if (!("IntersectionObserver" in window)) return;
-
-    // Only handle images with data-src attribute (for custom lazy loading)
-    const imgs = document.querySelectorAll("img[data-src]");
-    if (imgs.length === 0) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute("data-src");
-            }
-            img.classList.add("loaded");
-            io.unobserve(img);
-          }
-        });
-      },
-      { rootMargin: "100px" },
-    );
-    imgs.forEach((i) => io.observe(i));
-  }
-
-  function initKeyboardNav() {
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Tab" && e.ctrlKey) {
-        const main = document.getElementById("main-content");
-        if (main) {
-          main.setAttribute("tabindex", "-1");
-          main.focus();
-          main.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-  }
-
   function initCaseCardLinks() {
     document.querySelectorAll(".case-card").forEach((card) => {
       card.addEventListener("click", (e) => {
@@ -428,44 +343,11 @@
     });
   }
 
-  function initLenis() {
-    // Check if Lenis is loaded
-    if (typeof Lenis === "undefined") return;
-
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      mouseMultiplier: 1,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Connect Lenis to AOS to ensure animations trigger correctly during smooth scroll
-    // Note: AOS usually works fine on its own, but sometimes needs a refresh
-    // on scroll if using a virtual scroller. Lenis is native-friendly so it usually just works.
-  }
-
   document.addEventListener("DOMContentLoaded", () => {
-    initLenis(); // Initialize smooth scroll first
     initSmoothScroll();
-    initNavHoverEffect();
-    initSparkleEffect();
-    initButtonClickEffect();
     initCaseCardLinks();
     initThemeToggle();
     initLanguageToggle();
-    initLazyLoading();
-    initKeyboardNav();
   });
 
   // Small helpers exposed for debugging
