@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200&family=Inter&family=Lato&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -15,21 +15,25 @@
         /* Light Theme Colors (from your main portfolio) */
         --color-bg-light: #ffffff;
         --color-card-bg-light: #f7f7f7;
-        --color-text-main-light: #333;
-        --color-text-heading-light: #000;
+        --color-text-main-light: #000000;
+        --color-text-heading-light: #000000;
         --color-text-subtle-light: #666;
-        --color-btn-bg-light: #000;
-        --color-btn-text-light: #fff;
+        --color-btn-bg-light: #7dff7d;
+        --color-btn-text-light: #000000;
         --color-btn-border-light: #e0e0e0;
 
         /* Dark Theme Colors (from your main portfolio) */
-        --color-bg-dark: #020617;
-        --color-card-bg-dark: #1e293b;
-        --color-text-main-dark: #cccccc;
+        --color-bg-dark: radial-gradient(
+          ellipse at 50% 100%,
+          #581c87 0%,
+          #0f0518 70%
+        );
+        --color-card-bg-dark: #1e1b2e;
+        --color-text-main-dark: #e9d5ff;
         --color-text-heading-dark: #ffffff;
-        --color-accent-dark: #3b82f6;
-        --color-accent-dark-hover: #2563eb;
-        --color-btn-border-dark: #374151;
+        --color-accent-dark: #a855f7;
+        --color-accent-dark-hover: #9333ea;
+        --color-btn-border-dark: #4c1d95;
 
         /* Semantic Variables (Default Light) */
         --bg-color: var(--color-bg-light);
@@ -38,15 +42,15 @@
         --text-main: var(--color-text-main-light);
         --text-heading: var(--color-text-heading-light);
         --text-subtle: var(--color-text-subtle-light);
-        --text-message: #444;
+        --text-message: #666666;
         --btn-bg: var(--color-btn-bg-light);
         --btn-text: var(--color-btn-text-light);
         --btn-outline-color: var(--color-text-heading-light);
         --btn-outline-border: var(--color-btn-border-light);
         --btn-outline-hover-bg: #f9f9f9;
         --btn-outline-hover-border: var(--color-text-heading-light);
-        --profile-border: var(--color-btn-border-light);
-        --profile-hover-border: var(--color-btn-border-light);
+        --profile-border: var(--color-btn-bg-light);
+        --profile-hover-border: var(--color-btn-bg-light);
         --toggle-border: var(--color-btn-border-light);
         --toggle-color: var(--color-text-heading-light);
         --toggle-hover-bg: rgba(0, 0, 0, 0.05);
@@ -67,7 +71,7 @@
         --btn-outline-border: var(--color-btn-border-dark);
         --btn-outline-hover-bg: rgba(255, 255, 255, 0.1);
         --btn-outline-hover-border: var(--color-accent-dark);
-        --profile-border: var(--color-btn-border-dark);
+        --profile-border: var(--color-accent-dark);
         --profile-hover-border: var(--color-accent-dark);
         --toggle-border: var(--color-btn-border-dark);
         --toggle-color: var(--color-text-heading-dark);
@@ -76,7 +80,8 @@
 
       body {
         font-family: "Bricolage Grotesque", sans-serif;
-        background-color: var(--bg-color);
+        background: var(--bg-color);
+        background-attachment: fixed;
         color: var(--text-main);
         display: flex;
         justify-content: center;
@@ -84,6 +89,7 @@
         min-height: 100vh;
         margin: 0;
         padding: 20px;
+        font-weight: 200;
         transition:
           background-color 0.3s,
           color 0.3s;
@@ -106,7 +112,7 @@
       .card {
         background: var(--card-bg);
         padding: 40px;
-        border-radius: 16px;
+        border-radius: 8px;
         box-shadow: var(--card-shadow);
         max-width: 400px;
         width: 100%;
@@ -118,10 +124,11 @@
         margin-bottom: 8px;
         font-size: 28px;
         color: var(--text-heading);
-        font-weight: 700;
+        font-weight: 200;
         transition: color 0.3s;
       }
       .role {
+        font-family: "Lato", sans-serif;
         font-size: 16px;
         color: var(--text-subtle);
         margin-top: 0;
@@ -132,6 +139,7 @@
         transition: color 0.3s;
       }
       p.message {
+        font-family: "Inter", sans-serif;
         color: var(--text-message);
         margin-bottom: 40px;
         line-height: 1.6;
@@ -149,8 +157,9 @@
         background-color: var(--btn-bg);
         color: var(--btn-text);
         text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
+        border-radius: 6px;
+        font-family: "Inter", sans-serif;
+        font-weight: 200;
         transition:
           transform 0.2s,
           background-color 0.2s;
@@ -187,7 +196,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 600;
+        font-weight: 200;
         font-family: inherit;
         transition: all 0.2s;
       }
@@ -236,8 +245,8 @@
       <p class="role" data-i18n="role">UX Designer</p>
 
       <p class="message" data-i18n="message">
-        Min fullständiga portfolio håller på att uppdateras. <br />
-        Kika gärna på den arkiverade versionen eller kontakta mig direkt.
+        Hej & välkommen! Sidan är under rekonstruktion just nu - använd länkarna
+        eller hör av dig!
       </p>
 
       <div class="contact-links">
@@ -273,7 +282,7 @@
         sv: {
           role: "UX Designer",
           message:
-            "Min fullständiga portfolio håller på att uppdateras. <br /> Kika gärna på den arkiverade versionen eller kontakta mig direkt.",
+            "Hej & välkommen. Sidan är under rekonstruktion just nu - använd länkarna eller hör av dig.",
           btn_portfolio: "Se min portfolio",
           btn_linkedin: "LinkedIn",
           btn_email: "Mejla mig",
@@ -282,7 +291,7 @@
         en: {
           role: "UX Designer",
           message:
-            "My full portfolio is currently being updated. <br /> Feel free to check the archived version or contact me directly.",
+            "Hi & welcome! The site is currently under reconstruction - please use the links or get in touch!",
           btn_portfolio: "View my portfolio",
           btn_linkedin: "LinkedIn",
           btn_email: "Email me",

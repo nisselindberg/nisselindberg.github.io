@@ -49,18 +49,18 @@
 :root[data-theme="dark"] {
   --color-primary: #ffffff;
   --color-secondary: #020617; /* Dark dark blue */
-  --color-accent: #3b82f6; /* Tech Blue */
-  --color-accent-hover: #2563eb;
-  --color-glow: #172554; /* Mysterious deep blue glow */
+  --color-accent: #a855f7; /* Purple */
+  --color-accent-hover: #9333ea;
+  --color-glow: #2e1065; /* Deep purple glow */
   --color-text: #ffffff;
-  --color-text-light: #cccccc;
+  --color-text-light: #e9d5ff;
   --color-bg: radial-gradient(
     ellipse at 50% 100%,
-    #1e40af 0%,
-    #020617 70%
-  ); /* Mysterious gradient from bottom */
-  --color-bg-alt: #1e293b;
-  --color-border: #374151;
+    #581c87 0%,
+    #0f0518 70%
+  ); /* Purple gradient from bottom */
+  --color-bg-alt: #1e1b2e;
+  --color-border: #4c1d95;
 }
 
 :root[data-theme="light"] {
@@ -82,14 +82,14 @@
   :root {
     --color-primary: #ffffff;
     --color-secondary: #020617;
-    --color-accent: #3b82f6;
-    --color-accent-hover: #2563eb;
-    --color-glow: #172554;
+    --color-accent: #a855f7;
+    --color-accent-hover: #9333ea;
+    --color-glow: #2e1065;
     --color-text: #ffffff;
-    --color-text-light: #cccccc;
-    --color-bg: radial-gradient(ellipse at 50% 100%, #1e40af 0%, #020617 70%);
-    --color-bg-alt: #1e293b;
-    --color-border: #374151;
+    --color-text-light: #e9d5ff;
+    --color-bg: radial-gradient(ellipse at 50% 100%, #581c87 0%, #0f0518 70%);
+    --color-bg-alt: #1e1b2e;
+    --color-border: #4c1d95;
   }
 }
 
