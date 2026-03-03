@@ -25,8 +25,6 @@
       "case.challenge": "Utmaning",
       "case.solution": "Lösning",
       "case.process": "Process",
-      "case.process_text":
-        "Här kan du beskriva din arbetsprocess, från research till färdig design.",
       "case.gallery": "Galleri",
       "case.back": "Tillbaka till portfolio",
       "case1.title": "Club AFRY Sharepoint",
@@ -37,6 +35,8 @@
         "Den befintliga lösningen var svårnavigerad och medarbetarna hade svårt att hitta relevant information snabbt.",
       "case1.solution_text":
         "Jag tog fram en ny struktur och design som testades med användare och implementerades, vilket resulterade i en mer intuitiv upplevelse.",
+      "case1.process_text":
+        "Vi arbetade agilt med löpande användartester och iterationer för att säkerställa att den nya strukturen mötte medarbetarnas behov.",
       "case2.title": "ForestKIT",
       "case2.desc": "ForestKIT | AFRY Praktik",
       "case2.overview_text":
@@ -45,6 +45,8 @@
         "Användarna upplevde kartfunktionen som komplex och svår att använda på mobila enheter.",
       "case2.solution_text":
         "Genom att förenkla gränssnittet och tydliggöra funktionerna skapade vi en smidigare upplevelse för fältarbete.",
+      "case2.process_text":
+        "Fokus låg på fältstudier och att anpassa gränssnittet för mobila enheter som används utomhus i varierande ljusförhållanden.",
       "case3.title": "Aireal Solutions",
       "case3.desc": "Logo Design & UI Design | Elva Group",
       "case3.overview_text":
@@ -53,6 +55,8 @@
         "Företaget saknade en tydlig visuell identitet som speglade deras moderna arbetssätt.",
       "case3.solution_text":
         "Jag skapade en stilren och modern visuell identitet samt UI-komponenter för deras webb.",
+      "case3.process_text":
+        "Arbetet inleddes med workshops för att definiera varumärket, följt av skisser och framtagning av ett designsystem.",
       "case4.title": "Klädbutiken",
       "case4.desc": "Hemsida, App & Skärm | Skolprojekt 2025",
       "case4.overview_text":
@@ -61,6 +65,8 @@
         "Målet var att minska antalet steg i kassan och göra det enklare för kunder att filtrera produkter.",
       "case4.solution_text":
         "Resultatet blev en responsiv webbdesign och app-prototyp med fokus på tydlig navigation och snabb checkout.",
+      "case4.process_text":
+        "Genom user journey mapping identifierade vi flaskhalsar i kassan och designade om flödet för att minimera friktion.",
       "case5.title": "Closely",
       "case5.desc": "Social Media App | Skolprojekt 2025",
       "case5.overview_text":
@@ -69,6 +75,8 @@
         "Att skapa en plattform som uppmuntrar till fysiska möten snarare än bara digital interaktion.",
       "case5.solution_text":
         "En app som lyfter fram lokala händelser och gör det enkelt att skapa och gå med i grupper baserat på intressen.",
+      "case5.process_text":
+        "Vi utgick från workshops med målgruppen för att skapa ett koncept som främjar fysiska möten, och byggde sedan interaktiva prototyper.",
       "case6.title": "Minska Svinn",
       "case6.desc": "Minska svinn & Hållbarhet | UX Research",
       "case6.overview_text":
@@ -77,6 +85,8 @@
         "Många vill minska sitt svinn men saknar verktyg för att hålla koll på vad som finns hemma.",
       "case6.solution_text":
         "Ett koncept för en app som hjälper användare att spåra utgångsdatum och föreslår recept baserat på vad som finns i kylen.",
+      "case6.process_text":
+        "Projektet baserades på omfattande research inklusive enkäter och intervjuer för att förstå hushållens beteenden kring matsvinn.",
       "about.title": "Om mig",
       "about.text":
         "Hej! Jag heter Nisse Lindberg och läser mitt andra år för att bli UX Designer på IT-Högskolan. Kreativa processer är en av mina största passioner i livet. Jag gillar att tackla utmaningar och samarbeta med andra för att skapa effektiva lösningar. Jag designar med syfte, alltid med användaren i åtanke för att skapa intuitiva och meningsfulla upplevelser.",
@@ -119,8 +129,6 @@
       "case.challenge": "Challenge",
       "case.solution": "Solution",
       "case.process": "Process",
-      "case.process_text":
-        "Here you can describe your work process, from research to final design.",
       "case.gallery": "Gallery",
       "case.back": "Back to Portfolio",
       "case1.title": "Club AFRY Sharepoint",
@@ -131,6 +139,8 @@
         "The existing solution was difficult to navigate, and employees struggled to find relevant information quickly.",
       "case1.solution_text":
         "I developed a new structure and design that was user-tested and implemented, resulting in a more intuitive experience.",
+      "case1.process_text":
+        "We worked agilely with continuous user testing and iterations to ensure the new structure met employee needs.",
       "case2.title": "ForestKIT",
       "case2.desc": "ForestKIT | AFRY Internship",
       "case2.overview_text":
@@ -139,6 +149,8 @@
         "Users found the map function complex and difficult to use on mobile devices.",
       "case2.solution_text":
         "By simplifying the interface and clarifying functions, we created a smoother experience for field work.",
+      "case2.process_text":
+        "The focus was on field studies and adapting the interface for mobile devices used outdoors in varying lighting conditions.",
       "case3.title": "Aireal Solutions",
       "case3.desc": "Logo Design & UI Design | Elva Group",
       "case3.overview_text":
@@ -147,6 +159,8 @@
         "The company lacked a clear visual identity that reflected their modern way of working.",
       "case3.solution_text":
         "I created a clean and modern visual identity as well as UI components for their web platform.",
+      "case3.process_text":
+        "The work began with workshops to define the brand, followed by sketches and the development of a design system.",
       "case4.title": "The Clothing Store",
       "case4.desc": "Website, App & Screen | School Project 2025",
       "case4.overview_text":
@@ -155,6 +169,8 @@
         "The goal was to reduce the number of steps in the checkout process and make it easier for customers to filter products.",
       "case4.solution_text":
         "The result was a responsive web design and app prototype focusing on clear navigation and fast checkout.",
+      "case4.process_text":
+        "Through user journey mapping, we identified bottlenecks in the checkout and redesigned the flow to minimize friction.",
       "case5.title": "Closely",
       "case5.desc": "Social Media App | School Project 2025",
       "case5.overview_text":
@@ -163,6 +179,8 @@
         "To create a platform that encourages physical meetings rather than just digital interaction.",
       "case5.solution_text":
         "An app that highlights local events and makes it easy to create and join groups based on interests.",
+      "case5.process_text":
+        "We started with workshops with the target audience to create a concept that promotes physical meetings, and then built interactive prototypes.",
       "case6.title": "Reduce Waste",
       "case6.desc": "Reduce Waste & Sustainability | UX Research",
       "case6.overview_text":
@@ -171,6 +189,8 @@
         "Many people want to reduce waste but lack tools to keep track of what they have at home.",
       "case6.solution_text":
         "A concept for an app that helps users track expiration dates and suggests recipes based on what's in the fridge.",
+      "case6.process_text":
+        "The project was based on extensive research including surveys and interviews to understand household behaviors regarding food waste.",
       "about.title": "About Me",
       "about.text":
         "Hi! I'm Nisse Lindberg, a second-year UX Design student at IT-Högskolan. Creative processes are one of my greatest passions in life. I enjoy tackling challenges and collaborating with others to create effective solutions. I design with purpose, always keeping the user in mind to create intuitive and meaningful experiences.",

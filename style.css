@@ -313,8 +313,9 @@ nav a.active {
 .case-container,
 .case {
   max-width: 900px;
-  margin: var(--spacing-xl) auto var(--spacing-2xl); /* Justerad toppmarginal för att minska avståndet till header-bilden */
-  padding: var(--spacing-2xl) var(--spacing-lg);
+  /* Korrigerad toppmarginal för att säkerställa att innehållet inte döljs av den fasta headern */
+  margin: 120px auto var(--spacing-2xl);
+  padding: var(--spacing-lg);
 }
 
 .case-container h1,

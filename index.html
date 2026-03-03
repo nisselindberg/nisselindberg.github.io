@@ -3,296 +3,274 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Nisse Lindberg - UX Designer. Jag skapar användarcentrerade designlösningar som förbättrar användarupplevelsen."
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Nisse Lindberg | UX Designer Portfolio</title>
+    <title>Nisse Lindberg | UX Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css?v=3.0" rel="stylesheet" />
+    <style>
+      :root {
+        /* Light Theme Colors (from your main portfolio) */
+        --color-bg-light: #ffffff;
+        --color-card-bg-light: #f7f7f7;
+        --color-text-main-light: #333;
+        --color-text-heading-light: #000;
+        --color-text-subtle-light: #666;
+        --color-btn-bg-light: #000;
+        --color-btn-text-light: #fff;
+        --color-btn-border-light: #e0e0e0;
+
+        /* Dark Theme Colors (from your main portfolio) */
+        --color-bg-dark: #020617;
+        --color-card-bg-dark: #1e293b;
+        --color-text-main-dark: #cccccc;
+        --color-text-heading-dark: #ffffff;
+        --color-accent-dark: #3b82f6;
+        --color-accent-dark-hover: #2563eb;
+        --color-btn-border-dark: #374151;
+      }
+
+      body {
+        font-family: "Bricolage Grotesque", sans-serif;
+        background-color: var(--color-bg-light);
+        color: var(--color-text-main-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--color-btn-border-light);
+        margin-bottom: 24px;
+        transition:
+          transform 0.3s,
+          border-color 0.3s;
+      }
+      .profile-img:hover {
+        transform: scale(1.05);
+      }
+      .card {
+        background: var(--color-card-bg-light);
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+      h1 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 28px;
+        color: var(--color-text-heading-light);
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+      .role {
+        font-size: 16px;
+        color: var(--color-text-subtle-light);
+        margin-top: 0;
+        margin-bottom: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+      }
+      p.message {
+        color: #444;
+        margin-bottom: 40px;
+        line-height: 1.6;
+        transition: color 0.3s;
+      }
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .btn {
+        display: block;
+        padding: 14px 20px;
+        background-color: var(--color-btn-bg-light);
+        color: var(--color-btn-text-light);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+      }
+      .btn:hover {
+        background-color: var(--color-accent-dark-hover);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        background-color: transparent;
+        color: var(--color-text-heading-light);
+        border: 2px solid var(--color-btn-border-light);
+        transition:
+          background-color 0.2s,
+          color 0.2s,
+          border-color 0.2s;
+      }
+      .btn-outline:hover {
+        background-color: #f9f9f9;
+        border-color: var(--color-text-heading-light);
+      }
+
+      .lang-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: 2px solid var(--color-btn-border-light);
+        color: var(--color-text-heading-light);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-family: inherit;
+        transition: all 0.2s;
+      }
+      .lang-toggle:hover {
+        transform: translateY(-2px);
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Dark Mode Styles */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: var(--color-bg-dark);
+          color: var(--color-text-main-dark);
+        }
+        .card {
+          background: var(--color-card-bg-dark);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+          color: var(--color-text-heading-dark);
+        }
+        .role,
+        p.message {
+          color: var(--color-text-main-dark);
+        }
+        .btn {
+          background-color: var(--color-accent-dark);
+          color: var(--color-text-heading-dark);
+        }
+        .btn-outline {
+          color: var(--color-text-heading-dark);
+          border-color: var(--color-btn-border-dark);
+        }
+        .btn-outline:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-color: var(--color-accent-dark);
+        }
+        .profile-img {
+          border-color: var(--color-btn-border-dark);
+        }
+        .profile-img:hover {
+          border-color: var(--color-accent-dark);
+        }
+        .lang-toggle {
+          border-color: var(--color-btn-border-dark);
+          color: var(--color-text-heading-dark);
+        }
+        .lang-toggle:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    </style>
   </head>
   <body>
-    <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
+    <button class="lang-toggle" aria-label="Byt språk">
+      <span class="lang-text">SV</span>
+    </button>
+    <div class="card">
+      <img
+        src="img/cropped-Nisse1.jpg"
+        alt="Porträtt av Nisse Lindberg"
+        class="profile-img"
+      />
+      <h1>Nisse Lindberg</h1>
+      <p class="role" data-i18n="role">UX Designer</p>
 
-    <header>
-      <nav aria-label="Huvudmeny">
-        <ul class="main-menu">
-          <li><a href="#home" data-i18n="nav.home">Hem</a></li>
-          <li><a href="#work" data-i18n="nav.work">Arbete</a></li>
-          <li><a href="#about" data-i18n="nav.about">Om mig</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-        </ul>
-        <button
-          class="lang-toggle"
-          aria-label="Byt språk"
-          style="margin-left: auto"
-        >
-          <span class="lang-text">SV</span>
-        </button>
-        <button
-          class="theme-toggle"
-          aria-label="Slå på/av mörkt läge"
-          title="Byt tema"
-        >
-          <span class="theme-icon">🌙</span>
-        </button>
-      </nav>
-    </header>
-
-    <main id="main-content" role="main">
-      <!-- Home Section -->
-      <section id="home" aria-label="Hem">
-        <div class="hero-container">
-          <h1 data-aos="fade-up" data-aos-delay="500" data-i18n="hero.title">
-            Nisse Lindberg
-          </h1>
-          <img
-            src="img/cropped-Nisse1.jpg"
-            alt="Porträtt av Nisse Lindberg, UX Designer"
-            loading="lazy"
-          />
-          <h2 data-aos="fade-up" data-aos-delay="800" data-i18n="hero.subtitle">
-            Jag är Nisse - en UX Designer som förenklar komplexitet och
-            levererar effektiva lösningar. Kreativa processer är min största
-            passion.
-          </h2>
-          <div class="nav-buttons">
-            <a
-              href="CV25.pdf"
-              class="btn"
-              download
-              aria-label="Ladda ned CV"
-              data-i18n="hero.cv"
-              >Ladda ned CV</a
-            >
-            <a
-              href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
-              class="btn"
-              aria-label="Skicka e-post till Nisse"
-              data-i18n="hero.email"
-              >Skicka E-post</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Work Section -->
-      <section id="work" aria-label="Mitt arbete">
-        <div class="work-container">
-          <h2 data-i18n="work.title">Min expertis</h2>
-          <p data-i18n="work.desc">
-            Jag specialiserar mig på att skapa användarcentrerade designer som
-            förbättrar användarupplevelsen och ökar engagemanget. Mina
-            färdigheter inkluderar användarforskning, wireframing, prototypering
-            och användbarhetstest.
-          </p>
-          <div class="cases">
-            <article class="case-card" data-category="design">
-              <img
-                src="img/case1.jpg"
-                alt="Club AFRY Sharepoint - Redesign projekt"
-                loading="lazy"
-              />
-              <h3>Club AFRY Sharepoint</h3>
-              <p data-i18n="case1.desc">Sharepoint Redesign | AFRY Praktik</p>
-              <a href="case1.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-            <article class="case-card" data-category="ux">
-              <img
-                src="img/case2.jpeg"
-                alt="AFRY Smart Forestry - ForestKIT projekt"
-                loading="lazy"
-              />
-              <h3>AFRY Smart Forestry</h3>
-              <p data-i18n="case2.desc">ForestKIT | AFRY Praktik</p>
-              <a href="case2.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-            <article class="case-card" data-category="branding">
-              <img
-                src="img/case3.png"
-                alt="Aireal - Logo och UI Design"
-                loading="lazy"
-              />
-              <h3>Aireal</h3>
-              <p data-i18n="case3.desc">Logo Design & UI Design | Elva Group</p>
-              <a href="case3.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-            <article class="case-card" data-category="ui">
-              <img
-                src="img/case4.png"
-                alt="BRF.SE - Hemsida, App och skärm design"
-                loading="lazy"
-              />
-              <h3>BRF.SE</h3>
-              <p data-i18n="case4.desc">
-                Hemsida, App & Skärm | Skolprojekt 2025
-              </p>
-              <a href="case4.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-            <article class="case-card" data-category="social">
-              <img
-                src="img/case5.png"
-                alt="Closely - Social media projekt"
-                loading="lazy"
-              />
-              <h3>Closely</h3>
-              <p data-i18n="case5.desc">Social Media App | Skolprojekt 2025</p>
-              <a href="case5.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-            <article class="case-card" data-category="ux">
-              <img
-                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2520&auto=format&fit=crop"
-                alt="Klädbutiken - Minska svinn projekt"
-                loading="lazy"
-                style="object-position: top"
-              />
-              <h3>Klädbutiken</h3>
-              <p data-i18n="case6.desc">
-                Minska svinn & Hållbarhet | UX Research
-              </p>
-              <a href="case6.html" class="btn case-btn" data-i18n="case.btn"
-                >Utforska Case</a
-              >
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" aria-label="Om mig">
-        <div class="about-container">
-          <h2
-            data-aos="fade-right"
-            data-aos-delay="200"
-            data-i18n="about.title"
-          >
-            Om mig
-          </h2>
-          <p
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            data-i18n="about.text"
-          >
-            Hej! Jag heter Nisse Lindberg och läser mitt andra år för att bli UX
-            Designer på IT-Högskolan. Kreativa processer är en av mina största
-            passioner i livet. Jag gillar att tackla utmaningar och samarbeta
-            med andra för att skapa effektiva lösningar. Jag designar med syfte,
-            alltid med användaren i åtanke för att skapa intuitiva och
-            meningsfulla upplevelser.
-          </p>
-
-          <h3
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            data-i18n="about.services"
-          >
-            Tjänster:
-          </h3>
-          <ul data-aos="zoom-in" data-aos-delay="200">
-            <li data-i18n="about.service1">Användarforskning</li>
-            <li data-i18n="about.service2">Användbarhetstest</li>
-            <li data-i18n="about.service3">Wireframing</li>
-            <li data-i18n="about.service4">Prototypering</li>
-            <li data-i18n="about.service5">Tillgänglig Design</li>
-          </ul>
-
-          <h3
-            data-aos="zoom-out"
-            data-aos-delay="200"
-            data-i18n="about.personal"
-          >
-            Personligt:
-          </h3>
-          <p
-            data-aos="zoom-out"
-            data-aos-delay="200"
-            data-i18n="about.personal_text"
-          >
-            Jag är 44 år gammal förälder till små barn och tidigare musikant
-            från Göteborg. Jag älskar att träna, resa och spela musik. Musik är
-            en viktig del av mitt liv.
-          </p>
-
-          <figure class="about-images">
-            <figcaption data-i18n="about.caption">
-              På min fritid älskar jag att spela musik, träna och umgås med
-              familjen.
-            </figcaption>
-            <div class="about-images-grid">
-              <img
-                src="img/nissegitarr.webp"
-                alt="Nisse spelar gitarr"
-                loading="lazy"
-              />
-              <img
-                src="img/nisseandy.avif"
-                alt="Nisse springer med Andy McCoy från Hanoi Rocks"
-                loading="lazy"
-              />
-              <img
-                src="img/kids.avif"
-                alt="Nisses barn på en strand"
-                loading="lazy"
-              />
-            </div>
-          </figure>
-
-          <div class="about-btn-container">
-            <a href="#contact" class="btn" data-i18n="about.btn"
-              >Kontakta mig</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" aria-label="Kontakt">
-        <div class="contact-container">
-          <h2 data-i18n="contact.title">Kontakta mig</h2>
-          <p>
-            <span data-i18n="contact.intro"
-              >Tveka inte att mejla eller ringa mig!</span
-            ><br />
-            <strong data-i18n="contact.email">E-post:</strong>
-            <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a
-            ><br />
-            <strong data-i18n="contact.phone">Telefon:</strong>
-            <a href="tel:+46738700666">+46 738 700 666</a>
-          </p>
-          <a
-            href="mailto:info@nisselindberg.com?subject=Låt%20oss%20ansluta!"
-            class="btn"
-            data-i18n="contact.btn"
-            >Skicka E-post</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>
-        &copy; 2026 Nisse Lindberg |
-        <a href="mailto:info@nisselindberg.com">info@nisselindberg.com</a>
+      <p class="message" data-i18n="message">
+        Min fullständiga portfolio håller på att uppdateras. <br />
+        Kika gärna på den arkiverade versionen eller kontakta mig direkt.
       </p>
-    </footer>
 
-    <script src="js/main.js?v=3.0"></script>
+      <div class="contact-links">
+        <a href="index_old.html" class="btn" data-i18n="btn_portfolio"
+          >Se min portfolio</a
+        >
+        <a href="#" class="btn btn-outline" data-i18n="btn_linkedin"
+          >LinkedIn</a
+        >
+        <a
+          href="mailto:info@nisselindberg.com"
+          class="btn btn-outline"
+          data-i18n="btn_email"
+          >Mejla mig</a
+        >
+        <a href="tel:+46738700666" class="btn btn-outline" data-i18n="btn_phone"
+          >Ring: 073-870 06 66</a
+        >
+      </div>
+    </div>
+    <script>
+      const translations = {
+        sv: {
+          role: "UX Designer",
+          message:
+            "Min fullständiga portfolio håller på att uppdateras. <br /> Kika gärna på den arkiverade versionen eller kontakta mig direkt.",
+          btn_portfolio: "Se min portfolio",
+          btn_linkedin: "LinkedIn",
+          btn_email: "Mejla mig",
+          btn_phone: "Ring: 073-870 06 66",
+        },
+        en: {
+          role: "UX Designer",
+          message:
+            "My full portfolio is currently being updated. <br /> Feel free to check the archived version or contact me directly.",
+          btn_portfolio: "View my portfolio",
+          btn_linkedin: "LinkedIn",
+          btn_email: "Email me",
+          btn_phone: "Call: +46 738 700 666",
+        },
+      };
+
+      const langBtn = document.querySelector(".lang-toggle");
+      const langText = document.querySelector(".lang-text");
+      let currentLang = "sv";
+
+      langBtn.addEventListener("click", () => {
+        currentLang = currentLang === "sv" ? "en" : "sv";
+        langText.textContent = currentLang.toUpperCase();
+        document.documentElement.lang = currentLang;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          if (translations[currentLang][key]) {
+            el.innerHTML = translations[currentLang][key];
+          }
+        });
+      });
+    </script>
   </body>
 </html>
